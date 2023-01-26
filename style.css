@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+   --header-color: white;
+   --font-color: #aed3e1;
+   --bg-color: #070040;
+}
+
+body {
+   color: var(--font-color);
+   background-color: var(--bg-color);
+   font-family: Arial, sans-serif;
+}
+      
+h1 {
+   color: var(--header-color);
+   font-size: 3rem;
+   font-style: italic;
+   font-variant: small-caps;
+   text-align: center;
+ }
+      
+h2 {
+   color: var(--header-color);
+   font-size: 2.5rem;
+   font-variant: small-caps;
+}
+
+a:link {
+   color: var(--font-color);  
+}   
+
+a:visited {
+   color: var(--font-color);  
+}   
+
+a:hover {
+   color: yellow; 
+}  
+
+a:active {
+   color: purple;
+}   
+
+.nav {
+   text-align: center;
+}
+
+.nav a {
+   text-decoration: none;
+   text-transform: lowercase;
+   font-weight: bold;
+   font-size: larger;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.non-profit {
+   float: left;
+   clear: both;
+}
+
+ul {
+   float: left;
+}
+
+section {
+   margin-top: 50px;
+   margin-left: 20px;
+}
+      
+#IMG img {
+   margin-bottom: 20px;
+}
+      
+.center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}    
+
+td {
+   padding: 10px;
+}
+footer {
+    clear: both;
+    text-align: center;
+    margin: 2em;
+    padding: 2em;
+}
+</style>
+</html>
