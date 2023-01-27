@@ -19,11 +19,17 @@
     <section class="hero">
         <div class="hero-container">
             <div class="column-left">
-                <h1>Welcome to Acheson Athletics</h1>
+                <h1>Please Sign In </h1>
                 <p>
                     It is the time to learn and understand...
                 </p>
-                <button>Get Started</button>
+                <form action="/action_page.php">
+                    <label for="fname">Email:</label><br>
+                    <input type="text" id="fname" name="fname" value="email"><br>
+                    <label for="lname">Password:</label><br>
+                    <input type="text" id="lname" name="lname" value="password"><br><br>
+                </form>
+                <button>Log In</button>
             </div>
         </div>
     </section>
