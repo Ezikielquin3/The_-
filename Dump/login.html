@@ -20,16 +20,33 @@
         <div class="hero-container">
             <div class="column-left">
                 <h1>Please Sign In </h1>
-                <p>
-                    It is the time to learn and understand...
-                </p>
-                <form action="/action_page.php">
-                    <label for="fname">Email:</label><br>
-                    <input type="text" id="fname" name="fname" value="email"><br>
-                    <label for="lname">Password:</label><br>
-                    <input type="text" id="lname" name="lname" value="password"><br><br>
-                </form>
-                <button>Log In</button>
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn">
+                            <button type="button" class="toggle-btn">Log In</button>
+                            <button type="button" class="toggle-btn">Register</button>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <img src="" alt="icon">
+                        <img src="" alt="icon">
+                        <img src="" alt="icon">
+                    </div>
+                    <form id="login" class="input-group">
+                        <input type="text" class="input-feild" placeholder="User ID" required>
+                        <input type="text" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">Log In</button>
+                    </form>
+                    <form id="register" class="input-group">
+                        <input type="text" class="input-feild" placeholder="User ID" required>
+                        <input type="email" class="input-feild" placeholder="Email ID" required>
+                        <input type="text" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="chech-box"><span>I agree to the terms & condictions</span>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+                </div>
+                
             </div>
         </div>
     </section>
