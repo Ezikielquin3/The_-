@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite.csproj": {}
+    "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite.csproj": {
+    "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite.csproj",
-        "projectName": "AchesonAthleticsWebsite",
-        "projectPath": "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite.csproj",
+        "projectUniqueName": "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2.csproj",
+        "projectName": "AchesonAthleticsWebsite2",
+        "projectPath": "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2.csproj",
         "packagesPath": "C:\\Users\\avin6250\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite\\AchesonAthleticsWebsite\\obj\\",
+        "outputPath": "C:\\Users\\avin6250\\source\\repos\\AchesonAthleticsWebsite2\\AchesonAthleticsWebsite2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\avin6250\\AppData\\Roaming\\NuGet\\NuGet.Config",
