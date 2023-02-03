@@ -1,11 +1,10 @@
 nav {
     height: 80px;
-    background: yellow;
+    background: rgb(158, 242, 158);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem calc((100vw - 1300px) / 2)
-
 }
 .logo {
     color: #000;
