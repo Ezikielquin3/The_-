@@ -3,7 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "Dump",
+    "public": ["Dump","assets","css","views"],
     "ignore": [
       "firebase.json",
       "**/.*",
