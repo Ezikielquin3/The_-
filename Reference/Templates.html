@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="/Dump/css/nav.css" />
-    <link rel="stylesheet" href="/Dump/css/home.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/home.css" />
     <title>Templates Page - Acheson Athletics</title>
 </head>
 <body>
@@ -17,10 +17,10 @@
             var content;
             let SignedIn = true;
             if (SignedIn == true) {
-                content = '<nav><div class="logo"><a href="/Dump/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/Dump/views/Home.html">Home</a><a href="/Dump/views/Videos.html">Videos</a><a href="/Dump/views/Articles.html">Articles</a><a href="/Dump/views/Social.html">Social</a><a href="/Dump/views/Profile.html">Profile</a><a href="/Dump/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
             }
             else if (SignedIn == false) {
-                content = '<nav><div class="logo"><a href="/Dump/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/Dump/views/Home.html">Home</a><a href="/Dump/views/Videos.html">Videos</a><a href="/Dump/views/Articles.html">Articles</a><a href="/Dump/views/Social.html">Social</a><a href="/Dump/views/Login.html">Login</a></div></nav>';
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
             };
             el.insertAdjacentHTML('afterbegin', content);
         </script>
@@ -34,7 +34,7 @@
 
     <!--Footer-->
     <footer>
-        <p>©2023 - The_: </p><p><a href="/Dump/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/Dump/views/AboutUs.html">About Us</a></p>
+        <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
     </footer>
     <!--END-Footer-->
 </body>

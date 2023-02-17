@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/Dump/css/landing.css" />
-    <link rel="stylesheet" href="/Dump/css/nav.css" />
-
-    <style>
-      body {
-        background-image: url(/Dump/assets/workout.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed; 
-        background-size: 100% 100%;
-      }
-      </style>
-
-<title>landing Page - Acheson Athletics</title>
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <title>Templates Page - Acheson Athletics</title>
 </head>
 <body>
-<!--Header-->
-<header>
-  <div id="content"> </div>
-  <script>
-      var el = document.getElementById('content');
-      var content;
-      let SignedIn = true;
-      if (SignedIn == true) {
-          content = '<nav><div class="logo"><a href="/Dump/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/Dump/views/Home.html">Home</a><a href="/Dump/views/Videos.html">Videos</a><a href="/Dump/views/Articles.html">Articles</a><a href="/Dump/views/Social.html">Social</a><a href="/Dump/views/Profile.html">Profile</a><a href="/Dump/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-      }
-      else if (SignedIn == false) {
-          content = '<nav><div class="logo"><a href="/Dump/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/Dump/views/Home.html">Home</a><a href="/Dump/views/Videos.html">Videos</a><a href="/Dump/views/Articles.html">Articles</a><a href="/Dump/views/Social.html">Social</a><a href="/Dump/views/Login.html">Login</a></div></nav>';
-      };
-      el.insertAdjacentHTML('afterbegin', content);
-  </script>
-</header>
-<!--END-Header-->
+    <!--Header-->
+    <header>
+        <div id="content"> </div>
+        <script>
+            var el = document.getElementById('content');
+            var content;
+            let SignedIn = true;
+            if (SignedIn == true) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+            }
+            else if (SignedIn == false) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
+            };
+            el.insertAdjacentHTML('afterbegin', content);
+        </script>
+    </header>
+    <!--END-Header-->
 
 <h2>Get Started with Acheson Athletics</h2>
 <p>Check out our videos:</p>
