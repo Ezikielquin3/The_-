@@ -5,10 +5,7 @@
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/login.css" />
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js"></script>
+    
 
 <title>Login Page - Acheson Athletics</title>
 </head>
@@ -45,8 +42,8 @@
                         <img src="" alt="icon">
                     </div>
                     <form id="login" class="input-group">
-                        <input type="text" class="input-field" placeholder="User ID" required>
-                        <input type="text" class="input-field" placeholder="Enter Password" required>
+                        <input type="email" id="email" class="input-field" placeholder="Email" required>
+                        <input type="passsword" id="password"  class="input-field" placeholder="Enter Password" required>
                         <input type="checkbox" class="chech-box"><span>Remember Password</span>
                         <button type="submit" class="submit-btn">Log In</button>
                     </form>
@@ -78,9 +75,11 @@
         }
 
     </script>
-<p>testing</p>
-<p>bu bu bu</p>
-<p>tom tom tom</p>
-<p>omg omg please work</p>
+
 </body>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+
+<script src ="index.js"></script>
 </html>
