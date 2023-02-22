@@ -1,52 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/home.css" />
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-storage.js"></script>
-<title>Home Page - Acheson Athletics</title>
+    <title>Templates Page - Acheson Athletics</title>
 </head>
 <body>
-<!--Header-->
-<header>
-    <div id="content"> </div>
-    <script>
-        var el = document.getElementById('content');
-        var content;
-        let SignedIn = true;
-        if (SignedIn == true) {
-            content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-        }
-        else if (SignedIn == false) {
-            content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
-        };
-        el.insertAdjacentHTML('afterbegin', content);
-    </script>
-</header>
-<!--END-Header-->
-    
-<!-----BODY----->
-    <section class="hero-home">
-        <div class="hero-container">
-            <div class="column-left">
-                <h1>Welcome to Acheson Athletics</h1>
-                <p>
-                    It is the time to learn and understand...
-                </p>
-                <button>Get Started</button>
-            </div>
-        </div>
-    </section>
-    
+    <!--Header-->
+    <header>
+        <div id="content"> </div>
+        <script>
+            var el = document.getElementById('content');
+            var content;
+            let SignedIn = true;
+            if (SignedIn == true) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+            }
+            else if (SignedIn == false) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
+            };
+            el.insertAdjacentHTML('afterbegin', content);
+        </script>
+    </header>
+    <!--END-Header-->
+
+<h2>Get Started with Acheson Athletics</h2>
+<p>Check out our videos:</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="/assets/fitness.jpg" style="width:100%">
+  <div class="text">New Video Every Week</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="/assets/Workout2.jpg" style="width:100%">
+  <div class="text">Increasing Your Knowledge about Your Muscle</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="/assets/workout3.webp" style="width:100%">
+  <div class="text">Get Started!</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <h3>Card 1</h3>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <h3>Card 2</h3>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3>Card 3</h3>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <h3>Card 4</h3>
+      <p>Some text</p>
+      <p>Some text</p>
+    </div>
+  </div>
+</div>
     <!--Footer-->
     <footer>
-        <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
-    </footer>
-    <!--END-Footer-->
+      <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
+  </footer>
+  <!--END-Footer-->
 </body>
-</html>
+</html> 
