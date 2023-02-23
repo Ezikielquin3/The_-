@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    
+
+<title>Login Page - Acheson Athletics</title>
+</head>
+<body>
+        <!--Header-->
+    <header>
+        <div id="content"> </div>
+        <script>
+            var el = document.getElementById('content');
+            var content;
+            let SignedIn = true;
+            if (SignedIn == true) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+            }
+            else if (SignedIn == false) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
+            };
+            el.insertAdjacentHTML('afterbegin', content);
+        </script>
+    </header>
+    <!--END-Header-->
+        <div class="hero">
+
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                            <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                            <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                        
+                    </div>
+                    <div class="social-icons">
+                        <img src="" alt="icon">
+                        <img src="" alt="icon">
+                        <img src="" alt="icon">
+                    </div>
+                    <form id="login" class="input-group">
+                        <input type="user email" id= "user email " class="input-field" placeholder="Email" required>
+                        <input type="user password"  class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">Log In</button>
+                    </form>
+                    <form id="register" class="input-group">
+                        <input type="email" id= "email" class="input-field" placeholder="Email" required>
+                        <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="chech-box"><span>I agree to the terms & condictions</span>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+                </div>
+
+        </div>
+    
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+    </script>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+
+<script src ="index.js"></script>
+</html>
