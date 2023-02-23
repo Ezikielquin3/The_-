@@ -1,7 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
-const firebaseConfig = {
+
+var firebaseConfig = {
     apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
     authDomain: "the-950ec.firebaseapp.com",
     databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
@@ -13,7 +11,7 @@ const firebaseConfig = {
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+ firebase.initializeApp(firebaseConfig);
 
   // Initialize variables 
   const auth = firebase.auth()
@@ -22,17 +20,17 @@ const firebaseConfig = {
   //Set up our register function 
   function register (){
     // Get all our input fields 
-    email= documnet.getElementById('email').value
-    password= documnet.getElementById('password').value
+    email = document.getElementById('email').value
+    password = document.getElementById('password').value
 
-    if(validate_email(email)== false || validate_password(password)== false){
+    if(validate_email(email) == false || validate_password(password) == false) {
      alert ('Email or Password is Invalid')
       return
     }
 
     // Move on with Auth 
     auth.createUserWithEmailAndPassword(email, password)
-    .then(function(){
+    .then(function() {
       var user = auth.currentUser
 
       // Add this user to Firebase Database 
@@ -44,7 +42,7 @@ const firebaseConfig = {
         last_login : Date.now()
       }
       
-      database_ref.child('user/' + user.uid).set(user_data)
+      database_ref.child('users/' + user.uid).set(user_data)
 
       alert('User Created !!')
     })
