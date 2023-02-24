@@ -18,7 +18,7 @@ var firebaseConfig = {
   const database = firebase.database()
 
   //Set up our register function 
-  function register (){
+  function register(){
     // Get all our input fields 
     email = document.getElementById('email').value
     password = document.getElementById('password').value
