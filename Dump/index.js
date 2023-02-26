@@ -61,7 +61,7 @@ var firebaseConfig = {
 
   function validate_email(email){
    expression = /^[^@]+@\w+(\.\w+)+\w$/
-   if(expression.test(email)== true){
+   if(expression.test(email) == true){
     // Email is good 
     return true 
    } else {
