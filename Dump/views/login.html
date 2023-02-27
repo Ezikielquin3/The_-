@@ -5,7 +5,7 @@
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/login.css" />
-    <script src ="../index.js"></script>
+
 
 <title>Login Page - Acheson Athletics</title>
 </head>
@@ -29,55 +29,54 @@
     <!--END-Header-->
         <div class="hero">
 
-                <div class="form-box">
-                    <div class="button-box">
-                        <div id="btn"></div>
-                            <button type="button" class="toggle-btn" onclick="login()">Log In</button>
-                            <button type="button" class="toggle-btn" onclick="register()">Register</button>
-                        
-                    </div>
-                    <div class="social-icons">
-                        <img src="" alt="icon">
-                        <img src="" alt="icon">
-                        <img src="" alt="icon">
-                    </div>
-                    <form id="login" class="input-group">
-                        <input type="user email" id= "user email " class="input-field" placeholder="Email" required>
-                        <input type="user password"  class="input-field" placeholder="Enter Password" required>
-                        <input type="checkbox" class="chech-box"><span>Remember Password</span>
-                        <button type="submit" class="submit-btn">Log In</button>
-                    </form>
-                    <form id="register" class="input-group">
-                        <input type="email" id= "email" class="input-field" placeholder="Email" required>
-                        <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
-                        <input type="checkbox" class="chech-box"><span>I agree to the terms & condictions</span>
-                        <button type="submit" class="submit-btn">Register</button>
-                    </form>
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="log()">Log In</button>
+                        <button type="button" class="toggle-btn" onclick="reg()">Register</button>
+                    
                 </div>
+                <div class="social-icons">
+                    <img src="" alt="icon">
+                    <img src="" alt="icon">
+                    <img src="" alt="icon">
+                </div>
+                <div id="reg" class="input-group">
+                    <input type="email" id="email" class="input-field" placeholder="Email" required>
+                    <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="chech-box"><span>I agree to the terms & condictions</span>
+                    <button type="submit" class="submit-btn" onclick="register()">Register</button>
+                </div>
+                <form id="log" class="input-group">
+                    <input type="email" id= "user email " class="input-field" placeholder="Email" required>
+                    <input type="password"  class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="chech-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn" onclick="login()">Log In</button>
+                </form>
+            </div>
 
         </div>
+
+        <script>
+            var x = document.getElementById("log");
+            var y = document.getElementById("reg");
+            var z = document.getElementById("btn");
     
-    <script>
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
-        var z = document.getElementById("btn");
-
-        function register(){
-            x.style.left = "-400px";
-            y.style.left = "50px";
-            z.style.left = "110px";
-        }
-        function login(){
-            x.style.left = "50px";
-            y.style.left = "450px";
-            z.style.left = "0";
-        }
-
-    </script>
-
+            function reg(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+            function log(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+            }
+    
+        </script>
 </body>
 <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
-
+<script src ="../index.js"></script>
 </html>

@@ -59,3 +59,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+
+//How I fixed our view referencing:
+I just deleted the /dump/ reference because the code was looking for /dump/ within /dump/. The reference was too broad and so it didn't work
+The same applies to /views/
