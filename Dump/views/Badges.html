@@ -1,37 +1,43 @@
+!DOCTYPE html>
+<html>
 
-<!DOCTYPE html>
-<html lang="en"
-    itemscope itemtype="http://schema.org/Organization"
-    xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:og="http://opengraphprotocol.org/schema/"
-    xmlns:fb="http://www.facebook.com/2008/fbml">
-<head >
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Acheson Athletics</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <link rel='canonical' href='/badges'><meta property='og:url' content='/badges'>
-    <link rel="stylesheet" type="text/css" href="https://cdn.kastatic.org/genwebpack/prod/en/javascript/app-shell-package/app-entry.f30874036371b53cf0e9.css"/>
-    <link rel="shortcut icon" href="https://cdn.kastatic.org/images/favicon.ico?logo">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://cdn.kastatic.org/images/apple-touch-icon-57x57-precomposed.new.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://cdn.kastatic.org/images/apple-touch-icon-72x72-precomposed.new.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://cdn.kastatic.org/images/apple-touch-icon-114x114-precomposed.new.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://cdn.kastatic.org/images/apple-touch-icon-144x144-precomposed.new.png"/>
-    <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;</script><script async src='https://www.google-analytics.com/analytics.js'></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WSX5PBP');</script><script async src='https://www.googleoptimize.com/optimize.js?id=OPT-WR3FSPJ'></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <title>Templates Page - Acheson Athletics</title>
 </head>
-<body class="lang-en">
-    <div id="outer-wrapper" style="position:relative;z-index:0;" class="clearfix bibliotron-header white-outer-wrapper">
-        <div id="page-container" class="full-bleed">
-            <div id="page-container-inner">
-                <div id="fb-root"></div>
-                <div class="box-sizing-border-box-reset full-height">
-                    <div id="app-shell-root"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-        <script>__HEADERS__ = {"X-KA-is-e2e":"false","X-KA-is-phone":"false","X-KA-is-tablet":"false","X-KA-is-unsupported-browser":"false","X-KA-is-ios":"false","X-Fastly-Country":"US","X-KA-Region":"US-CO","X-KA-Lang":"en","X-KA-Locale":"en","X-KA-Locale-Status":"","X-KA-Curriculum":"us-cc","X-KA-has-any-permissions":"false","X-KA-may-be-under13":"false","X-KA-is-phantom":"false","X-KA-Static-Version":"230302-0943-44162f04e9e8","X-KA-Published-Content-Version":"13935320ae035411f590dd2af3242e00b56a9b57"}</script>
-    
-    
-    <script src="https://cdn.kastatic.org/genwebpack/prod/en/runtime.a85ff54aa9299afdca93.js"></script>
-    <script src="https://cdn.kastatic.org/genwebpack/prod/en/javascript/app-shell-package/app-entry.19ad7ac53df2fbcdce3e.js"></script>
+<body>
+    <!--Header-->
+    <header>
+        <link rel='canonical' href='/badges'><meta property='og:url' content='/badges'>
+        <div id="content"> </div>
+        <script>
+            var el = document.getElementById('content');
+            var content;
+            let SignedIn = true;
+            if (SignedIn == true) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+            }
+            else if (SignedIn == false) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
+            };
+            el.insertAdjacentHTML('afterbegin', content);
+        </script>
+    </header>
+    <!--END-Header-->
+
+    <h2>Templates Page</h2>
+    <p>Welcome to the Templates Page! Everything on this page is here for easy access and copy/pasting when building new
+        parts of the website. As a matter of fact, you can copy this entire page as a starting point for new pages, and
+        you'll only have to delete this line and the one above it. Happy trails!</p>
+
+    <!--Footer-->
+    <footer>
+        <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
+    </footer>
+    <!--END-Footer-->
 </body>
+
 </html>
