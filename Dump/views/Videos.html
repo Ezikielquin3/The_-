@@ -1,37 +1,12 @@
 <!DOCTYPE html>
 <html>
-
+    <!--https://www.freecodecamp.org/news/the-firestore-tutorial-for-2020-learn-by-example/ -->
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <title>Templates Page - Acheson Athletics</title>
-</head>
-
-<body>
-    <!--Header-->
-    <header>
-        <div id="content"> </div>
-        <script>
-            var el = document.getElementById('content');
-            var content;
-            let SignedIn = true;
-            if (SignedIn == true) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-            }
-            else if (SignedIn == false) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
-            };
-            el.insertAdjacentHTML('afterbegin', content);
-        </script>
-    </header>
-    <!--END-Header-->
-
-
-
-
-    <h2>Video Page</h2>
     <script>
         // with Commonjs syntax (if using Node)
         const firebase = require("firebase/app");
@@ -68,9 +43,36 @@
                 ...doc.data(),
             }));
             console.log("All data in 'Youtube' collection", data);
+            document.getElementById("Title").innerHTML = data;
         })
     </script>
-    <p></p>
+</head>
+
+<body onload="youtubeRef.get()">
+    <!--Header-->
+    <header>
+        <div id="content"> </div>
+        <script>
+            var el = document.getElementById('content');
+            var content;
+            let SignedIn = true;
+            if (SignedIn == true) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+            }
+            else if (SignedIn == false) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
+            };
+            el.insertAdjacentHTML('afterbegin', content);
+        </script>
+    </header>
+    <!--END-Header-->
+
+
+
+
+    <h2>Video Page</h2>
+   
+    <p><span id="Title"></span></p>
 
 
 
