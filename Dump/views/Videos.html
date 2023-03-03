@@ -33,8 +33,13 @@
 
     <h2>Video Page</h2>
     <script>
-        import { initializeApp } from "firebase/app";
-        import { getFirestore } from "firebase/firestore";
+        // with Commonjs syntax (if using Node)
+        const firebase = require("firebase/app");
+        require("firebase/firestore");
+
+        // with ES Modules (if using client-side JS, like React)
+        import firebase from 'firebase/app';
+        import 'firebase/firestore';
 
         // TODO: Replace the following with your app's Firebase project configuration
         // See: https://support.google.com/firebase/answer/7015592
@@ -50,23 +55,22 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
 
 
         // Initialize Cloud Firestore and get a reference to the service
-        const db = getFirestore(app);
+        const db = firebase.firestore();
 
-        import { collection, doc, getDoc } from "firebase/firestore";
-        const docRef = doc(db, "Youtube")
-        const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
-        } else {
-            console.log("No such document!");
-        }
+        const youtubeRef = firebase.firestore().collection('Youtube');
+        youtubeRef.get().then((snapshot) => {
+            const data = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+            console.log("All data in 'Youtube' collection", data);
+        })
     </script>
-
+    <p></p>
 
 
 
