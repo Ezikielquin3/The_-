@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/home.css" />
     <title>Templates Page - Acheson Athletics</title>
 </head>
+
 <body>
     <!--Header-->
     <header>
@@ -27,17 +28,59 @@
     </header>
     <!--END-Header-->
 
+
+
+
     <h2>Video Page</h2>
-    <p>Welcome to the Templates Page! Everything on this page is here for easy access and copy/pasting when building new
-        parts of the website. As a matter of fact, you can copy this entire page as a starting point for new pages, and
-        you'll only have to delete this line and the one above it. Happy trails!</p>
+    <script>
+        // with Commonjs syntax (if using Node)
+        const firebase = require("firebase/app");
+        require("firebase/firestore");
+
+        // with ES Modules (if using client-side JS, like React)
+        import firebase from 'firebase/app';
+        import 'firebase/firestore';
+
+        // TODO: Replace the following with your app's Firebase project configuration
+        // See: https://support.google.com/firebase/answer/7015592
+        const firebaseConfig = {
+            apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
+            authDomain: "the-950ec.firebaseapp.com",
+            databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
+            projectId: "the-950ec",
+            storageBucket: "the-950ec.appspot.com",
+            messagingSenderId: "921933112776",
+            appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
+            measurementId: "G-XNLKNENNS7"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        // Initialize Cloud Firestore and get a reference to the service
+        const db = firebase.firestore();
+
+        const youtubeRef = firebase.firestore().collection('Youtube');
+        youtubeRef.get().then((snapshot) => {
+            const data = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+            console.log("All data in 'Youtube' collection", data);
+        })
+    </script>
+    <p></p>
+
+
+
 
     <!--Footer-->
     <footer>
-        <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
+        <p>©2023 - The_: </p>
+        <p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
     </footer>
     <!--END-Footer-->
-    Ezikiel Quinones 
 </body>
 
 </html>

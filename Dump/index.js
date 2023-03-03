@@ -12,13 +12,9 @@ var firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  // Initialize Firestore
-  const db = getFirestore(app);
-
   // Initialize variables 
   const auth = firebase.auth()
   const database = firebase.database()
-
   //Set up our register function 
   function register(){
     // Get all our input fields 
