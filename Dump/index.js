@@ -6,15 +6,17 @@ var firebaseConfig = {
     storageBucket: "the-950ec.appspot.com",
     messagingSenderId: "921933112776",
     appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
-    measurementId: "G-XNLKNENNS7"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+ firebase.intializeApp(firebaseConfig);
+  
+  // Initialize Firestore
+  const db = getFirestore(app);
+
   // Initialize variables 
   const auth = firebase.auth()
   const database = firebase.database()
+
   //Set up our register function 
   function register(){
     // Get all our input fields 
