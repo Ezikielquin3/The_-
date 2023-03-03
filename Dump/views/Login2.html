@@ -27,42 +27,26 @@
         </script>
     </header>
     <!--END-Header-->
-        <div class="hero">
+        <div id="modal-signup" class="hero">
 
             <div class="form-box">
-                <div class="button-box">
-                    <div id="btn"></div>
-                        <button type="button" class="toggle-btn" onclick="log()">Log In</button>
-                        <button type="button" class="toggle-btn" onclick="reg()">Register</button>
-                    
-                </div>
-                <div class="social-icons">
-                    <img src="" alt="icon">
-                    <img src="" alt="icon">
-                    <img src="" alt="icon">
-                </div>
-                <div id="reg" class="input-group">
-                    <input type="email" id="email" class="input-field" placeholder="Email" required>
-                    <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="chech-box"><span>I agree to the terms & condictions</span>
-                    <button type="submit" class="submit-btn" onclick="register()">Register</button>
-                </div>
-                <form id="log" class="input-group">
-                    <input type="email" id= "user email " class="input-field" placeholder="Email" required>
-                    <input type="password"  class="input-field" placeholder="Enter Password" required>
-                    <input type="checkbox" class="chech-box"><span>Remember Password -- Bu MEh</span>
-                    <button type="submit" class="submit-btn" onclick="login()">Log In</button>
+                <form id="signup">
+                    <div id="reg" class="input-group">
+                        <input type="email" id="email" class="input-field" placeholder="Email" required>
+                        <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="chech-box"><span>I agree to the terms & condictions</span>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </div>
                 </form>
             </div>
 
         </div>
-        <script>
+        <script type="module">
             // Import the functions you need from the SDKs you need
-        import { initializeApp } from "firebase/app";
+        import { initializeApp } from "./firebase/app";
         import { getAnalytics } from "firebase/analytics";
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
-        import { getdatabase } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
-        import { getauth } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+        import { getdatabase } from "firebase/database";
+        import { getauth } from "firebase/auth";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -91,25 +75,9 @@
         db.setting({ timestampsInSnapshots: true});
 
         </script>
-
-        <script>
-            var x = document.getElementById("log");
-            var y = document.getElementById("reg");
-            var z = document.getElementById("btn");
-    
-            function reg(){
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
-            function log(){
-                x.style.left = "50px";
-                y.style.left = "450px";
-                z.style.left = "0";
-            }
-    
-        </script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="../auth.js"></script>
+        <script src="../login.js"></script>
         
 </body>
 
