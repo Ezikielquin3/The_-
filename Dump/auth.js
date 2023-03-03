@@ -1,0 +1,1 @@
+const signupForm = document.querySelector('#')
