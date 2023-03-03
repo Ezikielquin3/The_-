@@ -82,6 +82,14 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+        
+        // make auth and database references
+        const auth = firebase.auth();
+        const db = firebase.database();
+
+        // update database settings
+        db.setting({ timestampsInSnapshots: true});
+
         </script>
 
         <script>
