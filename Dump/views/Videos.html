@@ -8,43 +8,43 @@
     <link rel="stylesheet" href="/css/home.css" />
     <title>Templates Page - Acheson Athletics</title>
     <script>
-        // with Commonjs syntax (if using Node)
-        const firebase = require("firebase/app");
-        require("firebase/firestore");
+        // // with Commonjs syntax (if using Node)
+        // const firebase = require("firebase/app");
+        // require("firebase/firestore");
 
-        // with ES Modules (if using client-side JS, like React)
-        import firebase from 'firebase/app';
-        import 'firebase/firestore';
+        // // with ES Modules (if using client-side JS, like React)
+        // import firebase from 'firebase/app';
+        // import 'firebase/firestore';
 
-        // TODO: Replace the following with your app's Firebase project configuration
-        // See: https://support.google.com/firebase/answer/7015592
-        const firebaseConfig = {
-            apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
-            authDomain: "the-950ec.firebaseapp.com",
-            databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
-            projectId: "the-950ec",
-            storageBucket: "the-950ec.appspot.com",
-            messagingSenderId: "921933112776",
-            appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
-            measurementId: "G-XNLKNENNS7"
-        };
+        // // TODO: Replace the following with your app's Firebase project configuration
+        // // See: https://support.google.com/firebase/answer/7015592
+        // const firebaseConfig = {
+        //     apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
+        //     authDomain: "the-950ec.firebaseapp.com",
+        //     databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
+        //     projectId: "the-950ec",
+        //     storageBucket: "the-950ec.appspot.com",
+        //     messagingSenderId: "921933112776",
+        //     appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
+        //     measurementId: "G-XNLKNENNS7"
+        // };
 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
+        // // Initialize Firebase
+        // firebase.initializeApp(firebaseConfig);
 
 
-        // Initialize Cloud Firestore and get a reference to the service
-        const db = firebase.firestore();
+        // // Initialize Cloud Firestore and get a reference to the service
+        // const db = firebase.firestore();
 
-        const youtubeRef = firebase.firestore().collection('Youtube');
-        youtubeRef.get().then((snapshot) => {
-            const data = snapshot.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data(),
-            }));
-            console.log("All data in 'Youtube' collection", data);
-            document.getElementById("Title").innerHTML = data;
-        })
+        // const youtubeRef = firebase.firestore().collection('Youtube');
+        // youtubeRef.get().then((snapshot) => {
+        //     const data = snapshot.docs.map((doc) => ({
+        //         id: doc.id,
+        //         ...doc.data(),
+        //     }));
+        //     console.log("All data in 'Youtube' collection", data);
+        //     document.getElementById("Title").innerHTML = data;
+        // })
     </script>
 </head>
 
@@ -66,17 +66,11 @@
         </script>
     </header>
     <!--END-Header-->
-
-
-
-
     <h2>Video Page</h2>
-   
-    <p><span id="Title"></span></p>
-
-
-
-
+    <table>
+        <tr id="root"></tr>
+    </table>
+    <script>Videos.js</script>
     <!--Footer-->
     <footer>
         <p>©2023 - The_: </p>
