@@ -8,3 +8,5 @@ https://nodejs.org/en/
 install firebase to vsc
 https://medium.com/@david_shortman/build-and-debug-firebase-functions-in-vscode-73efb76166cf#:~:text=Open%20VSCode%2C%20and%20then%20select,and%20then%20open%20that%20folder.&text=to%20ensure%20that%20node%20was%20installed%20correctly.&text=and%20the%20package%20will%20install,as%20an%20Administrator%20on%20Windows).
 
+create a json table and then reference it in html table
+https://dev.to/__manucodes/let-s-create-a-table-using-json-and-javascript-4nc0
