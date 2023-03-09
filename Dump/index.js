@@ -1,4 +1,4 @@
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
   authDomain: "the-950ec.firebaseapp.com",
   databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
@@ -29,6 +29,7 @@ function register(){
   // Move on with Auth 
   auth.createUserWithEmailAndPassword(email, password)
   .then(function() {
+
     var user = auth.currentUser
 
     // Add this user to Firebase Database 
