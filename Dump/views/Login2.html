@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/login.css" />
 
 
-<title>Login Page - Acheson Athletics</title>
+    <title>Login Page - Acheson Athletics</title>
 </head>
 <body>
         <!--Header-->
@@ -34,14 +34,18 @@
                     <div id="reg" class="input-group">
                         <input type="email" id="email" class="input-field" placeholder="Email" required>
                         <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
-                        <input type="checkbox" class="chech-box"><span>I agree to the terms & condictions</span>
-                        <button type="submit" class="submit-btn">Register</button>
+
+                        <button type="submit" class="submit-btn" onclick="register()">Register</button>
                     </div>
                 </form>
             </div>
 
         </div>
-       
+        <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js"></script>
+
+        <script src="../index.js"></script>
         
 </body>
 
