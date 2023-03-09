@@ -1,4 +1,4 @@
-const firebaseConfig = {
+var firebaseConfig = {
   apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
   authDomain: "the-950ec.firebaseapp.com",
   databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
