@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/home.css" />
     <title>Templates Page - Acheson Athletics</title>
     <script>
         // // with Commonjs syntax (if using Node)
@@ -58,37 +58,42 @@
             var content;
             let SignedIn = true;
             if (SignedIn == true) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+                content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Profile.html">Profile</a><a href="../views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
             }
             else if (SignedIn == false) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
+                content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Login.html">Login</a></div></nav>';
             };
             el.insertAdjacentHTML('afterbegin', content);
         </script>
     </header>
     <!--END-Header-->
     <h2>Video Page</h2>
-    <div class="container"><br>
-        <h3>
-          Users in database
-        </h3>
-        <br>
         <table>
           <tr id="root"></tr>
         </table>
-      </div>
-      <br>
       <script src="../videodata.js"></script>
       <script>
         var root = document.getElementById('root');
-        data.forEach(element => root.insertAdjacentHTML('beforebegin', `<tr>
+        data.forEach(element => root.insertAdjacentHTML('beforebegin', `
+        <tr>
             <td><img src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></td>
-            <td>${element.lastName}</td></tr>`));
+            <td><div class="row">
+                <h2>${element.title}</h2>
+                </div>
+                <div class="row">
+                <h3>${element.category} Category</h3>
+                </div>
+                <div class="row">
+                <p>${element.description}</p>
+                </div>
+            </td>
+            <td></td>
+        </tr>`));
       </script>
     <!--Footer-->
     <footer>
         <p>©2023 - The_: </p>
-        <p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
+        <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a></p>
     </footer>
     <!--END-Footer-->
 </body>
