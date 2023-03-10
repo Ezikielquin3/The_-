@@ -1,24 +1,5 @@
 
-import { initializeApp } from "../firebase/app";
-import { getdatabase } from "../irebase/database";
-import { getauth } from "../firebase/auth";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
-    authDomain: "the-950ec.firebaseapp.com",
-    databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
-    projectId: "the-950ec",
-    storageBucket: "the-950ec.appspot.com",
-    messagingSenderId: "921933112776",
-    appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
-    measurementId: "G-XNLKNENNS7"
-  };
-  
-  firebase.intializeApp(firebaseConfig);
-  
-  // Initialize variables 
-  const auth = firebase.auth()
-  const database = firebase.database()
 
 function register(){
     // Get all our input fields 
@@ -80,20 +61,3 @@ function register(){
     }
   
   }
-
-const signupForm = document.querySelector('#signup');
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    //get user info
-    const email = signupForm['email'].value;
-    const password = signupForm['password'].value;
-    
-    // sign up the user 
-    AuthenticatorAssertionResponse.createUserWithEmailAndPassword(email, password).then(cred => {
-        console.log(cred.user);
-        const modal = document.querySelector('#modal-signup');
-        Map.Modal.getInstance(modal).close();
-        signupForm.reset();
-    })
-})
