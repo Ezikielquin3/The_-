@@ -4,6 +4,18 @@
     padding: 0;
 }
 
+body {
+    background: lightblue;
+}
+footer {
+    background: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .hero-home {
     background: lightblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -35,6 +47,10 @@
     line-height: 1.5;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+}
 button {
     padding: 1rem 3rem;
     font-size: 1rem;
