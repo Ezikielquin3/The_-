@@ -1,55 +1,14 @@
 <!DOCTYPE html>
 <html>
-<!--https://www.freecodecamp.org/news/the-firestore-tutorial-for-2020-learn-by-example/ -->
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/home.css" />
-    <title>Templates Page - Acheson Athletics</title>
-    <script>
-        // // with Commonjs syntax (if using Node)
-        // const firebase = require("firebase/app");
-        // require("firebase/firestore");
-
-        // // with ES Modules (if using client-side JS, like React)
-        // import firebase from 'firebase/app';
-        // import 'firebase/firestore';
-
-        // // TODO: Replace the following with your app's Firebase project configuration
-        // // See: https://support.google.com/firebase/answer/7015592
-        // const firebaseConfig = {
-        //     apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
-        //     authDomain: "the-950ec.firebaseapp.com",
-        //     databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
-        //     projectId: "the-950ec",
-        //     storageBucket: "the-950ec.appspot.com",
-        //     messagingSenderId: "921933112776",
-        //     appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
-        //     measurementId: "G-XNLKNENNS7"
-        // };
-
-        // // Initialize Firebase
-        // firebase.initializeApp(firebaseConfig);
-
-
-        // // Initialize Cloud Firestore and get a reference to the service
-        // const db = firebase.firestore();
-
-        // const youtubeRef = firebase.firestore().collection('Youtube');
-        // youtubeRef.get().then((snapshot) => {
-        //     const data = snapshot.docs.map((doc) => ({
-        //         id: doc.id,
-        //         ...doc.data(),
-        //     }));
-        //     console.log("All data in 'Youtube' collection", data);
-        //     document.getElementById("Title").innerHTML = data;
-        // })
-    </script>
+    <title>Video Catalogue - Acheson Athletics</title>
 </head>
 
-<body onload="youtubeRef.get()">
+<body>
     <!--Header-->
     <header>
         <div id="content"> </div>
@@ -76,7 +35,7 @@
         var root = document.getElementById('root');
         data.forEach(element => root.insertAdjacentHTML('beforebegin', `
         <tr>
-            <td><img src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></td>
+            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
             <td><div class="row">
                 <h2>${element.title}</h2>
                 </div>
@@ -92,8 +51,11 @@
       </script>
     <!--Footer-->
     <footer>
-        <p>©2023 - The_: </p>
-        <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a></p>
+        <br>
+        <div class="container">
+                <p>©2023 - The_: </p>
+                <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a></p>
+        </div>    
     </footer>
     <!--END-Footer-->
 </body>

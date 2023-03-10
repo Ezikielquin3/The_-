@@ -10,3 +10,9 @@ https://medium.com/@david_shortman/build-and-debug-firebase-functions-in-vscode-
 
 create a json table and then reference it in html table
 https://dev.to/__manucodes/let-s-create-a-table-using-json-and-javascript-4nc0
+
+reference different yt thumbnail sizes
+https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+
+transfer variables between html
+https://stackoverflow.com/questions/3724106/how-to-exchange-variables-between-two-html-pages
