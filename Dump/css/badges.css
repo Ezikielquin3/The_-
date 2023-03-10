@@ -19,8 +19,8 @@
 }
 img{
     transition: transform .2s;
-    width:500px;
-    height:500px;
+    width:1500px;
+    height:1500px;
     margin:0 auto;
 }
 img:hover{
