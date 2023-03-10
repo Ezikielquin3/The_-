@@ -1,3 +1,8 @@
+
+import { initializeApp } from "../firebase/app";
+import { getdatabase } from "../irebase/database";
+import { getauth } from "../firebase/auth";
+
 const firebaseConfig = {
     apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
     authDomain: "the-950ec.firebaseapp.com",
