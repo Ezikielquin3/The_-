@@ -1,7 +1,7 @@
 
-import { initializeApp } from "../node_modules/firebase/app";
-import { getdatabase } from "../node_modules/firebase/database";
-import { getauth } from "../node_modules/firebase/auth";
+import { initializeApp } from "../firebase/app";
+import { getdatabase } from "../irebase/database";
+import { getauth } from "../firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
