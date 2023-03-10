@@ -15,12 +15,12 @@
     justify-content: center;
     align-items: center;
     display:flex;
-    padding-top:30%;
+    padding-top:20%;
 }
 img{
     transition: transform .2s;
-    width:1500px;
-    height:1500px;
+    width:500px;
+    height:500px;
     margin:0 auto;
 }
 img:hover{
