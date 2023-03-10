@@ -1,7 +1,7 @@
 .column {
     float: left;
     width: 33.33%;
-    padding: 2px;
+    padding: 10px;
   }
   
   /* Clear floats after image containers */
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     display:flex;
-    padding-top:10%;
+    padding-top:30%;
 }
 img{
     transition: transform .2s;
