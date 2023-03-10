@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <!--https://www.freecodecamp.org/news/the-firestore-tutorial-for-2020-learn-by-example/ -->
+<!--https://www.freecodecamp.org/news/the-firestore-tutorial-for-2020-learn-by-example/ -->
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
@@ -67,10 +68,23 @@
     </header>
     <!--END-Header-->
     <h2>Video Page</h2>
-    <table>
-        <tr id="root"></tr>
-    </table>
-    <script src="/Videos.js"></script>
+    <div class="container"><br>
+        <h3>
+          Users in database
+        </h3>
+        <br>
+        <table>
+          <tr id="root"></tr>
+        </table>
+      </div>
+      <br>
+      <script src="../videodata.js"></script>
+      <script>
+        var root = document.getElementById('root');
+        data.forEach(element => root.insertAdjacentHTML('beforebegin', `<tr>
+            <td><img src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></td>
+            <td>${element.lastName}</td></tr>`));
+      </script>
     <!--Footer-->
     <footer>
         <p>©2023 - The_: </p>
