@@ -12,21 +12,6 @@
 </head>
 <body>
         <!--Header-->
-    <header>
-        <div id="content"> </div>
-        <script>
-            var el = document.getElementById('content');
-            var content;
-            let SignedIn = true;
-            if (SignedIn == true) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-            }
-            else if (SignedIn == false) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
-            };
-            el.insertAdjacentHTML('afterbegin', content);
-        </script>
-    </header>
     <!--END-Header-->
         <div id="modal-signup" class="hero">
 
@@ -36,17 +21,45 @@
                         <input type="email" id="email" class="input-field" placeholder="Email" required>
                         <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
 
-                        <button type="submit" class="submit-btn" onclick="register()">Register</button>
+                        <button type="submit" class="submit-btn" >Register</button>
                     </div>
                 </form>
             </div>
 
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="../auth.js"></script>
-        <script src="../login.js"></script>
         
+        <script type="module" src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js"></script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js"></script>
+        <script type="module" src="https://www.gstatic.com/firebasejs/9.17.2/firebase-database.js"></script>
+        
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "../../node_modules/firebase/firebase-app.js";
+            import { firestore } from "../../node_modules/firebase/firebase-firestore.js";
+            import { getAuth } from "../../node_modules/firebase/firebase-auth.js";
+                // TODO: Add SDKs for Firebase products that you want to use
+                // https://firebase.google.com/docs/web/setup#available-libraries
+
+                // Your web app's Firebase configuration
+                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseApp = initializeApp ({
+                apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
+                authDomain: "the-950ec.firebaseapp.com",
+                databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
+                projectId: "the-950ec",
+                appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
+                measurementId: "G-XNLKNENNS7"
+            });
+            
+                // Initialize Firebase
+            firebase.intializeApp(firebaseConfig);
+                // make auth and database references
+            const auth = getAuth ();
+            const database = getDatabase();
+            database.settings({timestampsInSnapshots: true});
+        </script>
+        <script src="../auth.js"></script>
 </body>
 
 </html>
