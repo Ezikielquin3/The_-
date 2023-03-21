@@ -96,7 +96,18 @@ button:hover {
 .textBack {
     color: rgb(177,83,190);
 }
-
+.thumbnailChest {
+    border:2px solid rgb(58, 140, 58);
+    border-radius:5px;
+}
+.thumbnailArms {
+    border:2px solid rgb(163,32,5);
+    border-radius:5px;
+}
+.thumbnailBack {
+    border:2px solid rgb(177,83,190);
+    border-radius:5px;
+}
 .center {
     text-align: center;
 }

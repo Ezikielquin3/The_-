@@ -35,7 +35,7 @@
         var root = document.getElementById('root');
         data.forEach(element => root.insertAdjacentHTML('beforebegin', `
         <tr>
-            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
+            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
             <td><div class="row">
                 <h2>${element.title}</h2>
                 </div>
