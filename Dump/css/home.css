@@ -9,12 +9,13 @@ body {
 }
 footer {
     background: white;
-    position: fixed;
     width: 100%;
     bottom:0;
     text-align: center;
 }
-
+header {
+    width: 100%;
+}
 .hero-home {
     background: lightblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -86,6 +87,16 @@ button:hover {
     background: #fff;
     color: #000;
 }
+.textChest {
+    color: rgb(58, 140, 58);
+}
+.textArms {
+    color: rgb(163,32,5);
+}
+.textBack {
+    color: rgb(177,83,190);
+}
+
 .center {
     text-align: center;
 }
