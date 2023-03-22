@@ -26,14 +26,14 @@
         </script>
     </header>
     <!--END-Header-->
-    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe id="output" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <p id="output"></p>
     <script>
         var embedid = parent.document.URL.substring(parent.document.URL.indexOf('='), parent.document.URL.length);
         var embedid2 = embedid.substring(1);
         window.onload = function(){
             var placeholder = "https://www.youtube.com/embed/"+embedid2;
-            document.getElementById('output').innerHTML = placeholder;
+            document.getElementById('output').src = placeholder;
         };
     </script>
     <!--Footer-->
