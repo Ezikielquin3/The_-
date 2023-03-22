@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/home.css" />
     <title>Templates Page - Acheson Athletics</title>
 </head>
 <body>
@@ -26,15 +26,24 @@
         </script>
     </header>
     <!--END-Header-->
+    <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <p id="output"></p>
     <script>
-        var qs = new Querystring();
-        var v1 = qs.get("myVar1");
+        var embedid = parent.document.URL.substring(parent.document.URL.indexOf('='), parent.document.URL.length);
+        var embedid2 = embedid.substring(1);
+        window.onload = function(){
+            var placeholder = "https://www.youtube.com/embed/"+embedid2;
+            document.getElementById('output').innerHTML = placeholder;
+        };
     </script>
     <!--Footer-->
     <footer>
-        <p>©2023 - The_: </p><p><a href="../PrivacyPolicy.html">Privacy Policy</a> - <a href="../AboutUs.html">About Us</a></p>
+        <br>
+        <div class="container">
+                <p>©2023 - The_: </p>
+                <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a></p>
+        </div>    
     </footer>
     <!--END-Footer-->
 </body>
-
 </html>
