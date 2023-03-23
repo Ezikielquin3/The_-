@@ -27,13 +27,18 @@
     </header>
     <!--END-Header-->
     <h1 class="center">Video Page</h1>
+    <div class="container">
+        <button class="buttonChest">Chest</button>
+    </div>
         <table>
           <tr id="root"></tr>
         </table>
       <script src="../videodata.js"></script>
       <script>
+        var buttoncat = null;
         var root = document.getElementById('root');
-        data.forEach(element => root.insertAdjacentHTML('beforebegin', `
+        if (buttoncat == null){
+            data.forEach(element => root.insertAdjacentHTML('beforebegin', `
         <tr>
             <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
             <td><div class="row">
@@ -48,6 +53,11 @@
             </td>
             <td></td>
         </tr>`));
+        }
+        else if (buttoncat == "Chest"){
+            
+        }
+        
       </script>
       <br></br>
     <!--Footer-->
