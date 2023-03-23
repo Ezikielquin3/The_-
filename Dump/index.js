@@ -1,4 +1,5 @@
 import {intializeApp} from 'firebase/app'
+import {getAuth} from 'firebase/auth'
 const firebaseApp = intializeApp({
   apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
   authDomain: "the-950ec.firebaseapp.com",
@@ -9,11 +10,11 @@ const firebaseApp = intializeApp({
   appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
   measurementId: "G-XNLKNENNS7"
 });
-
+const auth = getAuth (firebaseApp);
 firebase.intializeApp(firebaseConfig);
 
 // Initialize variables 
-const auth = firebase.auth()
+
 const database = firebase.database()
 
 //Set up our register function 
