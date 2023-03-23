@@ -9,12 +9,13 @@ body {
 }
 footer {
     background: white;
-    position: fixed;
     width: 100%;
     bottom:0;
     text-align: center;
 }
-
+header {
+    width: 100%;
+}
 .hero-home {
     background: lightblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -85,6 +86,27 @@ button:hover {
 .button:hover {
     background: #fff;
     color: #000;
+}
+.textChest {
+    color: rgb(58, 140, 58);
+}
+.textArms {
+    color: rgb(163,32,5);
+}
+.textBack {
+    color: rgb(177,83,190);
+}
+.thumbnailChest {
+    border:2px solid rgb(58, 140, 58);
+    border-radius:5px;
+}
+.thumbnailArms {
+    border:2px solid rgb(163,32,5);
+    border-radius:5px;
+}
+.thumbnailBack {
+    border:2px solid rgb(177,83,190);
+    border-radius:5px;
 }
 .center {
     text-align: center;

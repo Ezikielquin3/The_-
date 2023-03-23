@@ -12,41 +12,73 @@
 </head>
 <body>
         <!--Header-->
-    <header>
-        <div id="content"> </div>
-        <script>
-            var el = document.getElementById('content');
-            var content;
-            let SignedIn = true;
-            if (SignedIn == true) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-            }
-            else if (SignedIn == false) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
-            };
-            el.insertAdjacentHTML('afterbegin', content);
-        </script>
-    </header>
     <!--END-Header-->
         <div id="modal-signup" class="hero">
 
             <div class="form-box">
                 <form id="signup">
                     <div id="reg" class="input-group">
-                        <input type="email" id="email" class="input-field" placeholder="Email" required>
-                        <input type="password" id="password" class="input-field" placeholder="Enter Password" required>
+                        <input type="email" id="email" name= "email" class="input-field" autocomplete="username" placeholder="Email" required>
+                        <input type="password" id="password" name="password" class="input-field" autocomplete="current-password" placeholder="Enter Password" required>
 
-                        <button type="submit" class="submit-btn" onclick="register()">Register</button>
+                        <button type="submit" id="signUp" class="submit-btn" >Register</button>
                     </div>
                 </form>
             </div>
 
         </div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="../auth.js"></script>
-        <script src="../login.js"></script>
         
 </body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+const firebaseConfig = initializeApp ({
+apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
+authDomain: "the-950ec.firebaseapp.com",
+databaseURL: "https://the-950ec-default-rtdb.firebaseio.com",
+projectId: "the-950ec",
+appId: "1:921933112776:web:4a9093a12226845ecb0cfd",
+measurementId: "G-XNLKNENNS7"
+});
+
+// Initialize Firebase
+const app = !getApps().length ? initializeApp( firebaseConfig ) : getApp();
+// make auth and database references
+const auth = getAuth (app);
+const database = getDatabase(app);
+
+signUp.addEventListener('click', (e) => {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        alert('user created!');
+        // ...
+    })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert(errorMessage);
+    // ..
+    });
+
+})
+
+export { auth, database };
+
+</script>
 
 </html>
