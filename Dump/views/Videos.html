@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
@@ -28,16 +29,16 @@
     <!--END-Header-->
     <h1 class="center">Video Page</h1>
     <div class="container">
-        <button class="buttonChest">Chest</button>
+        <button class="buttonChest" id="buttoncat">Chest</button>
     </div>
-        <table>
-          <tr id="root"></tr>
-        </table>
-      <script src="../videodata.js"></script>
-      <script>
+    <table>
+        <tr id="root"></tr>
+    </table>
+    <script src="../videodata.js"></script>
+    <script>
         var buttoncat = null;
         var root = document.getElementById('root');
-        if (buttoncat == null){
+        if (buttoncat == null) {
             data.forEach(element => root.insertAdjacentHTML('beforebegin', `
         <tr>
             <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
@@ -54,19 +55,38 @@
             <td></td>
         </tr>`));
         }
-        else if (buttoncat == "Chest"){
-            
-        }
-        
-      </script>
-      <br></br>
+        else if (buttoncat == "Chest") {
+            var chestOnly = data.filter(function (entry) {
+                return entry.category === 'Chest';
+            });
+
+            chestOnly.forEach(element => root.insertAdjacentHTML('beforebegin', `
+        <tr>
+            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
+            <td><div class="row">
+                <h2>${element.title}</h2>
+                </div>
+                <div class="row">
+                <h3 class="text${element.category}">${element.category} Category</h3>
+                </div>
+                <div class="row">
+                <p>${element.description}</p>
+                </div>
+            </td>
+            <td></td>
+        </tr>`));
+        };
+
+    </script>
+    <br></br>
     <!--Footer-->
     <footer>
         <br>
         <div class="container">
-                <p>©2023 - The_: </p>
-                <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a></p>
-        </div>    
+            <p>©2023 - The_: </p>
+            <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a>
+            </p>
+        </div>
     </footer>
     <!--END-Footer-->
 </body>
