@@ -29,14 +29,14 @@
     <!--END-Header-->
     <h1 class="center">Video Page</h1>
     <div class="container">
-        <button class="buttonChest" id="buttoncat">Chest</button>
+        <button>Chest</button>
     </div>
     <table>
         <tr id="root"></tr>
     </table>
     <script src="../videodata.js"></script>
     <script>
-        var buttoncat = null;
+        var buttoncat;
         var root = document.getElementById('root');
         if (buttoncat == null) {
             data.forEach(element => root.insertAdjacentHTML('beforebegin', `
