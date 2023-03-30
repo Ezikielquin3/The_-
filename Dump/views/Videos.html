@@ -28,15 +28,28 @@
     </header>
     <!--END-Header-->
     <h1 class="center">Video Page</h1>
-    <div class="container">
-        <button>Chest</button>
+    <br>
+    <div class="container, space, center" >
+        <button id="chest">Chest</button>
+        <button id="arms">Arms</button>
+        <button id="back">Back</button>
+        <button id="core">Core</button>
+        <button id="legs">Legs</button>
     </div>
-    <table>
+    <table class="littlespace">
         <tr id="root"></tr>
     </table>
     <script src="../videodata.js"></script>
     <script>
         var buttoncat;
+        document.getElementById("chest").onclick = function chestCat(){
+            buttoncat = "chest";
+            alert(buttoncat);
+        };
+        document.getElementById("arms").onclick = function armsCat(){
+            buttoncat = "arms";
+            alert(buttoncat);
+        };
         var root = document.getElementById('root');
         if (buttoncat == null) {
             data.forEach(element => root.insertAdjacentHTML('beforebegin', `
