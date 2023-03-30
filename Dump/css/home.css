@@ -211,3 +211,9 @@ button:hover {
 .inline {
     display:inline-block;
 }
+.container2 {
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-bottom: 2px;
+    display: flex;
+}
