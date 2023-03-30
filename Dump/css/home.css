@@ -88,9 +88,7 @@ button:hover {
     background: #fff;
     color: #000;
 }
-.buttonChest {
-    
-}
+
 .textChest {
     color: rgb(58, 140, 58);
 }
@@ -125,4 +123,8 @@ button:hover {
 .space{
     padding-left: 10%;
     padding-right: 10%;
+}
+.littlespace{
+    padding-left: 5%;
+    padding-right: 5%;
 }
