@@ -27,6 +27,7 @@
     </header>
     <!--END-Header-->
     <br>
+    <a href="../views/Videos.html" class="littlespace"><button>< back to catalogue</button></a>
     <div class="space, center">
         <iframe id="output" width="1280" height="720" src="" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
@@ -47,7 +48,7 @@
         };
         //This uses the ID to find other fields of the video//
         var tuple = data.find(item => item.id === embedid2);
-        document.getElementById("root1").innerHTML = tuple.title;
+        document.getElementById("root1").innerHTML = tuple.title + " - ";
         document.getElementById("root2").innerHTML = tuple.category + " Category";
         document.getElementById("root2").classList.add('text'+tuple.category);
     </script>
