@@ -27,12 +27,14 @@
     </header>
     <!--END-Header-->
     <br>
-    <div class="center">
-        <iframe id="output" width="1280" height="720" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="space, center">
+        <iframe id="output" width="1280" height="720" src="" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div class="space">
         <h2 id="root1"></h2>
+        <h3 id="root2"></h3>
     </div>
+    <br>
     <script src="../videodata.js"></script>
     <script>
         //This captures the URL, and then trims it until it gets the ID of the video//
@@ -44,8 +46,10 @@
             document.getElementById('output').src = placeholder;
         };
         //This uses the ID to find other fields of the video//
-        var tuple = data.find(item => item.id === embedid2)
-        document.getElementById("root1").innerHTML = tuple.title
+        var tuple = data.find(item => item.id === embedid2);
+        document.getElementById("root1").innerHTML = tuple.title;
+        document.getElementById("root2").innerHTML = tuple.category + " Category";
+        document.getElementById("root2").classList.add('text'+tuple.category);
     </script>
     <!--Footer-->
     <footer>
