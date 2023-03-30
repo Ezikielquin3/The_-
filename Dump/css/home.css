@@ -53,12 +53,15 @@ header {
     justify-content: space-between;
 }
 button {
-    padding: 1rem 3rem;
+    padding: 1rem 1.5rem;
     font-size: 1rem;
     border: none;
     color: white;
     background: black;
     cursor: pointer;
+    border-radius:50px;
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -201,4 +204,16 @@ button:hover {
 .littlespace{
     padding-left: 5%;
     padding-right: 5%;
+}
+.absolute {
+    position:absolute;
+}
+.inline {
+    display:inline-block;
+}
+.container2 {
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-bottom: 2px;
+    display: flex;
 }
