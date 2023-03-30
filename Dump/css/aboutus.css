@@ -1,74 +1,46 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .column {
-    float: left;
-    width: 33.3%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-  }
-  
-  .about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #474e5d;
-    color: white;
-  }
-  
-  .container {
-    padding: 0 16px;
-  }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .title {
-    color: grey;
-  }
-  
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
-  img {
-    float: left;
-    width:  100px;
-    height: 100px;
-    object-fit: cover;
-}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 50px 0;
+		}
+		.member {
+			display: flex;
+			margin: 20px;
+			align-items: center;
+			max-width: 800px;
+		}
+		.member img {
+			border-radius: 50%;
+			width: 200px;
+			height: 200px;
+			object-fit: cover; /* Ensures image covers entire space */
+			object-position: center; /* Centers image within space */
+			margin-right: 20px;
+		}
+		.member .info {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+		}
+		.member .info h3 {
+			margin: 0;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.member .info p {
+			margin: 0;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+		.member .info a {
+			margin-top: 5px;
+			font-size: 14px;
+			text-decoration: none;
+			color: #333;
+		}
+		.member .info a:hover {
+			text-decoration: underline;
+		}
+	
