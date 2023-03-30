@@ -6,6 +6,7 @@
 
 body {
     background: lightblue;
+    font-family: Verdana, sans-serif;
 }
 footer {
     background: white;
@@ -121,3 +122,7 @@ button:hover {
     text-align: right;
 }
 
+.space{
+    padding-left: 10%;
+    padding-right: 10%;
+}
