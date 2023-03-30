@@ -98,6 +98,8 @@ button:hover {
     border-radius: 10px;
     box-shadow: black 0 10px 20px -10px;
     box-sizing: border-box;
+    padding-left:50px;
+    padding-right:50px;
 }
 .buttonChest:hover {
     background: white;
@@ -110,6 +112,8 @@ button:hover {
     border-radius: 10px;
     box-shadow: black 0 10px 20px -10px;
     box-sizing: border-box;
+    padding-left:50px;
+    padding-right:50px;
 }
 .buttonArms:hover {
     background: white;
@@ -122,6 +126,8 @@ button:hover {
     border-radius: 10px;
     box-shadow: black 0 10px 20px -10px;
     box-sizing: border-box;
+    padding-left:50px;
+    padding-right:50px;
 }
 .buttonBack:hover {
     background: white;
@@ -134,6 +140,8 @@ button:hover {
     border-radius: 10px;
     box-shadow: black 0 10px 20px -10px;
     box-sizing: border-box;
+    padding-left:50px;
+    padding-right:50px;
 }
 .buttonLegs:hover {
     background: white;
@@ -146,6 +154,8 @@ button:hover {
     border-radius: 10px;
     box-shadow: black 0 10px 20px -10px;
     box-sizing: border-box;
+    padding-left:50px;
+    padding-right:50px;
 }
 .buttonCore:hover {
     background: white;
