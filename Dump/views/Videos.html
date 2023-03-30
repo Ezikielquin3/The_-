@@ -29,7 +29,7 @@
     <!--END-Header-->
     <h1 class="center">Video Page</h1>
     <div class="container">
-        <button>Chest</button>
+        <button id="button">Chest</button>
     </div>
     <table>
         <tr id="root"></tr>
@@ -37,6 +37,9 @@
     <script src="../videodata.js"></script>
     <script>
         var buttoncat;
+        button.onclick = function () {
+            return buttoncat="chest"
+        };
         var root = document.getElementById('root');
         if (buttoncat == null) {
             data.forEach(element => root.insertAdjacentHTML('beforebegin', `
