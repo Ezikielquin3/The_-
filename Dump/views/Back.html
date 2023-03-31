@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/badgespage.css" />
-    <a href="../views/VideoPage.html?myVar=6" onclick="updateBackBadge()"><img class="thumbnail${element.category}" src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></a>
-    <a href="../views/VideoPage.html?myVar=7" onclick="updateBackBadge()"><img class="thumbnail${element.category}" src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></a>
-    <a href="../views/VideoPage.html?myVar=8" onclick="updateBackBadge()"><img class="thumbnail${element.category}" src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></a>
-    <script>window.onload = function() {
+   <script>window.onload = function() {
         updateBackBadge();
     }</script>
     
-    
     <script> function goBack() {
         window.location.href = "Badges.html";
+      }</script>
+      <script> function watchVideo() {
+        window.location.href = "Video.html";
       }</script>
       <script>function updateBackBadge() {
         // Check if the user has watched all three back videos
@@ -62,7 +61,7 @@
         <img src="../assets/noaward.jpg" alt="noaward" width="300" height="300" >
       </div>
       <button class="prev-page-btn" onclick="goBack()">Badges Page</button>
-      <button onclick="window.location.href='video.html'">Go to Video Page</button>
+      <button class="prev-page-btn" onclick="watchVideo()">Video Page</button>
 
     <!--Footer-->
     <footer>
