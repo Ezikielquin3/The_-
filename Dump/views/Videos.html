@@ -6,7 +6,7 @@
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/home.css" />
-    <title>Video Catalogue - Acheson Athletics</title>
+    <title>Video Catalog - Acheson Athletics</title>
 </head>
 
 <body>
@@ -28,9 +28,10 @@
     </header>
     <!--END-Header-->
     <br>
-    <h1 class="center">Video Page</h1>
+    <h1 class="center">Video Catalog</h1>
     <br>
     <div class="container, space, center">
+        <!--These buttons send links to the current page, but with a different variable which is used to show only certain video categories-->
         <a href="../views/Videos.html?myVar=1"><button class="buttonChest">Chest</button></a>
         <a href="../views/Videos.html?myVar=2"><button class="buttonArms">Arms</button></a>
         <a href="../views/Videos.html?myVar=3"><button class="buttonBack">Back</button></a>
@@ -39,18 +40,23 @@
     </div>
     <br>
     <table class="littlespace">
+        <!--This line pulls the entire table when its ready-->
         <tr id="root"></tr>
     </table>
     <script src="../videodata.js"></script>
     <script>
+        //This grabs the web address, and then shortens it down until it is just the variable, which is then used to push the proper table//
         var embedid = parent.document.URL.substring(parent.document.URL.indexOf('='), parent.document.URL.length);
         var buttoncat = embedid.substring(1);
+        //Connects with HTML element//
         var root = document.getElementById('root');
+        //Big if statement checks buttoncat variable to see which category the user picked (if any)//
         if (buttoncat == 1) {
+            //This filters out the database to only show the chest category//
             var chestOnly = data.filter(function (entry) {
                 return entry.category === 'Chest';
             });
-
+            //This pushes the HTML table//
             chestOnly.forEach(element => root.insertAdjacentHTML('beforebegin', `
         <tr>
             <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
