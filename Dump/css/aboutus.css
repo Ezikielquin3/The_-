@@ -1,0 +1,45 @@
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 50px 0;
+		}
+		.member {
+			display: flex;
+			margin: 20px;
+			align-items: center;
+			max-width: 800px;
+		}
+		.member img {
+			width: 200px;
+			height: 200px;
+			object-fit: cover; /* Ensures image covers entire space */
+			object-position: center; /* Centers image within space */
+			margin-right: 20px;
+		}
+		.member .info {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+		}
+		.member .info h3 {
+			margin: 0;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.member .info p {
+			margin: 0;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+		.member .info a {
+			margin-top: 5px;
+			font-size: 14px;
+			text-decoration: none;
+			color: #333;
+		}
+		.member .info a:hover {
+			text-decoration: underline;
+		}
+	

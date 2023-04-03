@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/badgespage.css" />
+    <script> function goBack() {
+        window.location.href = "Badges.html";
+      }</script>
+    <title>Templates Page - Acheson Athletics</title>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div id="content"> </div>
+        <script>
+            var el = document.getElementById('content');
+            var content;
+            let SignedIn = true;
+            if (SignedIn == true) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+            }
+            else if (SignedIn == false) {
+                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
+            };
+            el.insertAdjacentHTML('afterbegin', content);
+        </script>
+    </header>
+    <!--END-Header-->
+
+    <h1>Bicep Badge</h1>
+    <div class="image-text-container">
+    <h2>You currently do not have this badge to obtain this badge watch all the bicep videos</h2>
+    <img src="../assets/noaward.jpg" alt="noaward" width="300" height="300" >
+    </div>
+    <button class="prev-page-btn" onclick="goBack()">Badges Page</button>
+
+    <!--Footer-->
+    <footer>
+        <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
+    </footer>
+    <!--END-Footer-->
+</body>
+
+</html>

@@ -6,7 +6,7 @@
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/home.css" />
-    <title>Templates Page - Acheson Athletics</title>
+    <title>Video Viewer - Acheson Athletics</title>
 </head>
 <body>
     <!--Header-->
@@ -26,15 +26,32 @@
         </script>
     </header>
     <!--END-Header-->
-    <iframe id="output" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <p id="output"></p>
+    <br>
+    <a href="../views/Videos.html" class="littlespace"><button>< back to catalog</button></a>
+    <div class="container2">
+        <h2 id="root1"></h2>
+        <h3 id="root2" style="padding-top:6px; padding-left:6px;"></h3>
+    </div>
+    <div class="space, center">
+        <iframe id="output" width="1280" height="720" src="" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
+    <br>
+    <script src="../videodata.js"></script>
     <script>
+        //This captures the URL, and then trims it until it gets the ID of the video//
         var embedid = parent.document.URL.substring(parent.document.URL.indexOf('='), parent.document.URL.length);
         var embedid2 = embedid.substring(1);
+        //This adds the ID of the video onto the end of the embed link in order to grab the right video//
         window.onload = function(){
             var placeholder = "https://www.youtube.com/embed/"+embedid2;
             document.getElementById('output').src = placeholder;
         };
+        //This uses the ID to find other fields of the video//
+        var tuple = data.find(item => item.id === embedid2);
+        document.getElementById("root1").innerHTML = tuple.title + " -";
+        document.getElementById("root2").innerHTML = tuple.category + " Category";
+        document.getElementById("root2").classList.add('text'+tuple.category);
     </script>
     <!--Footer-->
     <footer>
