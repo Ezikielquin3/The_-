@@ -1,0 +1,5 @@
+// Create a login html page with email and password text box
+/// form box for html with Email and password text box will need to contain an ID that associate the form and the text box
+
+// From the same html, you will add a script on the bottom
+//
