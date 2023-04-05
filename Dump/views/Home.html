@@ -31,7 +31,7 @@
 <p>Check out our videos:</p>
 
 <div class="slideshow-container">
-
+<a href="../views/Videos.html">
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
   <img src="../assets/IMG_2330.png" style="width:100%">
@@ -49,7 +49,7 @@
   <img src="../assets/IMG_2356.png" style="width:100%">
   <div class="text">Get Started!</div>
 </div>
-
+</a>
 </div>
 <br>
 
@@ -82,39 +82,58 @@ function showSlides() {
 </script>
 <br>
 <div class="row">
-  <div class="column">
+  
+    <div class="column">
+      <a href="" class="sneakylink" id="link0">
     <div class="card">
-      <h3>Card 1</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="card0"></h3>
+      <p id="splash0"></p>
+      <p class="quiettext" id="date0"></p>
     </div>
+    </a>
   </div>
 
   <div class="column">
+    <a href="" class="sneakylink" id="link1">
     <div class="card">
-      <h3>Card 2</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="card1"></h3>
+      <p id="splash1"></p>
+      <p class="quiettext" id="date1"></p>
     </div>
+  </a>
   </div>
   
   <div class="column">
+    <a href="" class="sneakylink" id="link2">
     <div class="card">
-      <h3>Card 3</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="card2"></h3>
+      <p id="splash2"></p>
+      <p class="quiettext" id="date2"></p>
     </div>
+  </a>
   </div>
   
   <div class="column">
+    <a href="" class="sneakylink" id="link3">
     <div class="card">
-      <h3>Card 4</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="card3"></h3>
+      <p id="splash3"></p>
+      <p class="quiettext" id="date3"></p>
     </div>
+  </a>
   </div>
 </div>
 <br>
+<script src="../articledata.js"></script>
+<script>
+  for(let i = 0; i < 4; i++){
+    document.getElementById("card"+[i]).innerHTML = "Title";
+    document.getElementById("splash"+[i]).innerHTML = "A sentence about this thing";
+    document.getElementById("date"+[i]).innerHTML = "12/3/23";
+
+  }
+  
+</script>
 <!--Footer-->
 <footer>
   <br>

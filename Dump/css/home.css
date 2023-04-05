@@ -3,7 +3,10 @@
     margin: 0;
     padding: 0;
 }
-
+.sneakylink{
+    color: inherit;
+    text-decoration: inherit;
+}
 body {
     background: lightblue;
     font-family: Verdana, sans-serif;
@@ -239,4 +242,8 @@ button:hover {
     height: 400px;
     margin-top:auto;
     margin-bottom:auto;
+}
+.quiettext {
+    color: gray;
+    font-size: 10pt;
 }
