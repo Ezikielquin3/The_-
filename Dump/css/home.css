@@ -27,7 +27,6 @@ header {
     height: 95vh;
     padding: 3rem calc((100vw - 1300px) / 2);
 }
-
 .column-left {
     display: flex;
     flex-direction: column;
@@ -226,4 +225,18 @@ button:hover {
     padding-right: 16%;
     padding-bottom: 2px;
     display: flex;
+}
+.transparent {
+    color:transparent;
+}
+.landingcard {
+    background-color: rgb(173, 216, 230, 0.8);
+    display: flex;
+    border: 3px solid black;
+    border-radius: 50px;
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
+    height: 400px;
+    margin-top:auto;
+    margin-bottom:auto;
 }

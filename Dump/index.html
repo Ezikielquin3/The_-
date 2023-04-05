@@ -5,7 +5,7 @@
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/home.css" />
-<title>Home Page - Acheson Athletics</title>
+<title>Landing Page - Acheson Athletics</title>
 </head>
 <body>
 <!--Header-->
@@ -27,22 +27,32 @@
 <!--END-Header-->
     
 <!-----BODY----->
-    <section class="hero-home">
+    <section class="hero-home" style="background-image: url('assets/IMG_2339.png'); background-repeat: no-repeat; background-attachment:fixed; background-size: cover;">
         <div class="hero-container">
-            <div class="column-left">
+            <div class="landingcard">
+                <div class="column-left">
                 <h1>Welcome to Acheson Athletics!</h1>
                 <p>
                     It is the time to learn and understand...
                 </p>
-                <a href="views/Home.html" class="button">Get Started</a>
-                <a href="views/Login.html" class="button">Login Page</a>
+                <div class="container">
+                    <a href="views/Home.html"><button>Get Started</button></a>
+                    <p class="transparent">...</p>
+                    <a href="views/Login.html"><button>Login Page</button></a>
+                </div>
             </div>
+            </div>
+            
         </div>
     </section>
-    <img src="../assets/IMG_2238.jpg"></img>
     <!--Footer-->
     <footer>
-        <p> ©2023 - The_: <a class="left" href="views/PrivacyPolicy.html">Privacy Policy</a> - <a class="left" href="views/AboutUs.html">About Us</a></p>
+        <br>
+        <div class="container">
+            <p>©2023 - The_: </p>
+            <p><a href="views/PrivacyPolicy.html">Privacy Policy</a> - <a href="views/AboutUs.html">About Us</a>
+            </p>
+        </div>
     </footer>
     <!--END-Footer-->
 </body>
