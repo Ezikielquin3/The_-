@@ -5,13 +5,21 @@
 }
 body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
-img {vertical-align: middle;}
+img {
+  vertical-align: middle;
+  border-radius: 10px;
+  border: 2px solid black;
+}
 
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  background-color:black;
+  border-radius: 10px;
+  box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
 }
 
 /* Caption text */
@@ -52,12 +60,13 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 10s;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+  0% {opacity: .4} 
+  20% {opacity: 1}
+  100% {opacity: 1}
 }
 
 /* Float four columns side by side */
