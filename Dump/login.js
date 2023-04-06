@@ -34,6 +34,16 @@
             // Signed in 
             const user = userCredential.user;
 
+            function writeUserData (email) {
+                const reference = ref(database, 'users/' + user.uid);
+    
+                set(reference, {
+                    email: email,
+                })
+            }
+            
+            writeUserData(email);
+
             alert('user created!');
             // ...
         })
@@ -45,15 +55,6 @@
         // ..
         });
 
-        function writeUserData (email) {
-            const reference = ref(database, 'users/' + user.uid);
-
-            set(reference, {
-                email: email,
-            })
-        }
-        
-        writeUserData(email);
     })
 
     export { auth, database };
