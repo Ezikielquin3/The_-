@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="/css/nav.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/badgespage.css" />
-   <script>window.onload = function() {
-        updateBackBadge();
-    }</script>
- 
-
-    </script>
+    <script> function goBack() {
+        window.location.href = "Badges.html";
+      }</script>
     <title>Templates Page - Acheson Athletics</title>
 </head>
 <body>
@@ -34,25 +31,13 @@
     </header>
     <!--END-Header-->
 
-    <h1>Back Badge</h1>    
+    <h1>introduction Badge</h1>
     <div class="image-text-container">
-        <h2>You currently do not have this badge to obtain this badge watch all the back videos</h2>
-        <img src="../assets/noaward.jpg" alt="noaward" width="300" height="300" >
-      </div>
-      <button class="prev-page-btn" onclick="goBack()">Badges Page</button>
-      <button class="prev-page-btn" onclick="watchVideo()">Video Page</button>
-      <script> 
-      function clicked() {
-        var response = prompt("Did you watch all the videos? Enter 'yes' or 'no'.");
-        if (response == "yes") {
-          document.getElementById("noaward").src = "../assets/award.jpg";
-        } else if (response == "no") {
-          // do nothing or display another message
-        } else {
-          alert("Invalid response. Please enter 'yes' or 'no'.");
-        }
-      }
-    </script>
+    <h2>You currently do not have this badge to obtain this badge watch all the thigh videos</h2>
+    <img src="../assets/noaward.jpg" alt="noaward" width="300" height="300" >
+    </div>
+    <button class="prev-page-btn" onclick="goBack()">Badges Page</button>
+
     <!--Footer-->
     <footer>
         <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
