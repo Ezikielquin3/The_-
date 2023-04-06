@@ -68,8 +68,9 @@ signUp.addEventListener('click', (e) => {
     .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
+        const reference = ref(database, 'users/' + user.uid);
 
-        set(ref (database, 'users/' + user.uid), {
+        set(reference, {
             email: email,
         })
         alert('user created!');
