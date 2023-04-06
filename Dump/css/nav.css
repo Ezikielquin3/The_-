@@ -6,6 +6,8 @@ nav {
     align-items: center;
     padding: 0rem calc((100vw - 1300px) / 2);
     border-bottom: 2px solid black;
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
 }
 .logo {
     color: #000;
