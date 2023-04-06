@@ -3,7 +3,17 @@
     margin: 0;
     padding: 0;
 }
-
+.sneakylink{
+    color: inherit;
+    text-decoration: inherit;
+}
+.sneakylink2{
+    color: inherit;
+    text-decoration: inherit;
+}
+.sneakylink2:hover {
+    color:white;
+}
 body {
     background: lightblue;
     font-family: Verdana, sans-serif;
@@ -27,7 +37,6 @@ header {
     height: 95vh;
     padding: 3rem calc((100vw - 1300px) / 2);
 }
-
 .column-left {
     display: flex;
     flex-direction: column;
@@ -104,7 +113,7 @@ button:hover {
 .buttonChest:hover {
     background: white;
     color:rgb(58, 140, 58);
-    border: 5px solid rgb(58, 140, 58);
+    border: 2px solid rgb(58, 140, 58);
 }
 .buttonArms {
     background-color: rgb(163,32,5);
@@ -118,7 +127,7 @@ button:hover {
 .buttonArms:hover {
     background: white;
     color:rgb(163,32,5);
-    border: 5px solid rgb(163,32,5);
+    border: 2px solid rgb(163,32,5);
 }
 .buttonBack {
     background-color: rgb(177,83,190);
@@ -132,7 +141,7 @@ button:hover {
 .buttonBack:hover {
     background: white;
     color:rgb(177,83,190);
-    border: 5px solid rgb(177,83,190);
+    border: 2px solid rgb(177,83,190);
 }
 .buttonLegs {
     background-color: rgb(73 156 223);
@@ -146,7 +155,7 @@ button:hover {
 .buttonLegs:hover {
     background: white;
     color:rgb(73 156 223);
-    border: 5px solid rgb(73 156 223);
+    border: 2px solid rgb(73 156 223);
 }
 .buttonCore {
     background-color: rgb(234 59 171);
@@ -160,7 +169,7 @@ button:hover {
 .buttonCore:hover {
     background: white;
     color:rgb(234 59 171);
-    border: 5px solid rgb(234 59 171);
+    border: 2px solid rgb(234 59 171);
 }
 .textChest {
     color: rgb(58, 140, 58);
@@ -179,23 +188,38 @@ button:hover {
 }
 .thumbnailChest {
     border:2px solid rgb(58, 140, 58);
-    border-radius:5px;
+    border-radius:10px;
+}
+.thumbnailChest:hover {
+    border:2px solid white;
 }
 .thumbnailArms {
     border:2px solid rgb(163,32,5);
-    border-radius:5px;
+    border-radius:10px;
+}
+.thumbnailArms:hover {
+    border:2px solid white;
 }
 .thumbnailBack {
     border:2px solid rgb(177,83,190);
-    border-radius:5px;
+    border-radius:10px;
+}
+.thumbnailBack:hover {
+    border:2px solid white;
 }
 .thumbnailLegs {
     border:2px solid rgb(73 156 223);
-    border-radius:5px;
+    border-radius:10px;
+}
+.thumbnailLegs:hover {
+    border:2px solid white;
 }
 .thumbnailCore {
     border:2px solid rgb(234 59 171);
-    border-radius:5px;
+    border-radius:10px;
+}
+.thumbnailCore:hover {
+    border:2px solid white;
 }
 .center {
     text-align: center;
@@ -226,4 +250,22 @@ button:hover {
     padding-right: 16%;
     padding-bottom: 2px;
     display: flex;
+}
+.transparent {
+    color:transparent;
+}
+.landingcard {
+    background-color: rgb(173, 216, 230, 0.8);
+    display: flex;
+    border: 3px solid black;
+    border-radius: 50px;
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
+    height: 400px;
+    margin-top:auto;
+    margin-bottom:auto;
+}
+.quiettext {
+    color: gray;
+    font-size: 10pt;
 }

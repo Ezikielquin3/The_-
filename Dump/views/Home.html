@@ -26,12 +26,12 @@
       </script>
   </header>
   <!--END-Header-->
-
-<h2>Get Started with Acheson Athletics</h2>
-<p>Check out our videos:</p>
-
+<br>
+<h2 class="littlespace">Get Started with Acheson Athletics</h2>
+<p class="littlespace">Check out our videos:</p>
+<br>
 <div class="slideshow-container">
-
+<a href="../views/Videos.html">
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
   <img src="../assets/IMG_2330.png" style="width:100%">
@@ -41,7 +41,7 @@
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
   <img src="../assets/IMG_2341.png" style="width:100%">
-  <div class="text">Increasing Your Knowledge about Your Muscle</div>
+  <div class="text">Increasing Your Knowledge about Your Muscles</div>
 </div>
 
 <div class="mySlides fade">
@@ -49,7 +49,7 @@
   <img src="../assets/IMG_2356.png" style="width:100%">
   <div class="text">Get Started!</div>
 </div>
-
+</a>
 </div>
 <br>
 
@@ -77,43 +77,67 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 3500); // Change image every 3.5 seconds
 }
 </script>
-
-<div class="row">
-  <div class="column">
+<br>
+<h2 class="littlespace">News & Updates:</h2>
+<br>
+<div class="littlespace">
+  <div class="row">
+  
+    <div class="column">
+      <a href="" class="sneakylink" id="link0">
     <div class="card">
-      <h3>Card 1</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="acard0"></h3>
+      <p id="splash0"></p>
+      <p class="quiettext" id="date0"></p>
     </div>
+    </a>
   </div>
 
   <div class="column">
+    <a href="" class="sneakylink" id="link1">
     <div class="card">
-      <h3>Card 2</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="acard1"></h3>
+      <p id="splash1"></p>
+      <p class="quiettext" id="date1"></p>
     </div>
+  </a>
   </div>
   
   <div class="column">
+    <a href="" class="sneakylink" id="link2">
     <div class="card">
-      <h3>Card 3</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="acard2"></h3>
+      <p id="splash2"></p>
+      <p class="quiettext" id="date2"></p>
     </div>
+  </a>
   </div>
   
   <div class="column">
+    <a href="" class="sneakylink" id="link3">
     <div class="card">
-      <h3>Card 4</h3>
-      <p>Some text</p>
-      <p>Some text</p>
+      <h3 id="acard3"></h3>
+      <p id="splash3"></p>
+      <p class="quiettext" id="date3"></p>
     </div>
+  </a>
   </div>
 </div>
+</div>
+
+<br>
+<script src="../articledata.js"></script>
+<script>
+  data2.reverse();
+  for(let i = 0; i < 4; i++){
+    document.getElementById("acard"+[i]).innerHTML = data2[i].title;
+    document.getElementById("splash"+[i]).innerHTML = data2[i].splash;
+    document.getElementById("date"+[i]).innerHTML = data2[i].date;
+  };
+</script>
 <!--Footer-->
 <footer>
   <br>

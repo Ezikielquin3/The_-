@@ -44,7 +44,7 @@
         var embedid2 = embedid.substring(1);
         //This adds the ID of the video onto the end of the embed link in order to grab the right video//
         window.onload = function(){
-            var placeholder = "https://www.youtube.com/embed/"+embedid2;
+            var placeholder = "https://www.youtube.com/embed/"+embedid2+"?&autoplay=1&modestbranding=1&rel=0";
             document.getElementById('output').src = placeholder;
         };
         //This uses the ID to find other fields of the video//
