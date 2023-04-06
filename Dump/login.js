@@ -20,7 +20,7 @@
     });
     
     // Initialize Firebase
-    const app = !getApps().length ? initializeApp( firebaseConfig ) : getApp();
+    const app = initializeApp( firebaseConfig );
     // make auth and database references
     const auth = getAuth (app);
     const database = getDatabase(app);
