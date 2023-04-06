@@ -11,16 +11,16 @@
       window.location.href = "Badges.html";
     }</script>
      <script> function watchVideos() {
-      window.location.href = "Video.html";
+      window.location.href = "Videos.html";
     }</script>
   <script> 
     function clicked() {
       var response = prompt("Did you watch all the videos? Enter 'yes' or 'no'.");
       if (response == "yes") {
-        document.getElementById("noaward").src = "../assets/noaward.jpg";
+        document.getElementById("award").src = "../assets/award.jpg";
         window.location.href = "../assets/award.jpg";
       } else if (response == "no") {
-        // do nothing or display another message
+        // do nothing 
       } else {
         alert("Invalid response. Please enter 'yes' or 'no'.");
       }
