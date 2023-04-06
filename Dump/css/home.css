@@ -269,3 +269,7 @@ button:hover {
     color: gray;
     font-size: 10pt;
 }
+.backgroundshadow {
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
+}
