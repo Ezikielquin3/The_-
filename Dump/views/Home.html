@@ -131,11 +131,11 @@ function showSlides() {
 <br>
 <script src="../articledata.js"></script>
 <script>
+  data2.reverse();
   for(let i = 0; i < 4; i++){
     document.getElementById("acard"+[i]).innerHTML = data2[i].title;
     document.getElementById("splash"+[i]).innerHTML = data2[i].splash;
     document.getElementById("date"+[i]).innerHTML = data2[i].date;
-    document.getElementById("link"+[i]).setAttribute(href, data2[i].link)
   };
   
 </script>
