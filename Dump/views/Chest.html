@@ -10,6 +10,21 @@
     <script> function goBack() {
         window.location.href = "Badges.html";
       }</script>
+       <script> function watchVideos() {
+        window.location.href = "Videos?myVar=3";
+      }</script>
+    <script> 
+      function clicked() {
+        var response = prompt("Did you watch all the videos? Enter 'yes' or 'no'.");
+        if (response == "yes") {
+          document.getElementById("noaward").src = "../assets/award.jpg";
+        } else if (response == "no") {
+          // do nothing 
+        } else {
+          alert("Invalid response. Please enter 'yes' or 'no'.");
+        }
+      }
+    </script>  
     <title>Templates Page - Acheson Athletics</title>
 </head>
 <body>
