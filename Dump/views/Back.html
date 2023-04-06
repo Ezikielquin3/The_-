@@ -10,29 +10,8 @@
    <script>window.onload = function() {
         updateBackBadge();
     }</script>
-    
-    <script> function goBack() {
-        window.location.href = "Badges.html";
-      }</script>
-      <script> function watchVideo() {
-        window.location.href = "Video.html";
-      }</script>
-      <script>function updateBackBadge() {
-        // Check if the user has watched all three back videos
-        var watchedAllBackVideos = // logic to check whether the user has watched all three back videos
-    
-        // Get the badge image element
-      
-         backBadge = document.getElementById('../assets/noaward.jpg');
-      
-    
-        // Update the badge image based on whether the user has watched all three back videos
-        if (watchedAllBackVideos) {
-            backBadge.src = '../images/award.png';
-        } else {
-            backBadge.src = '../images/noaward.png';
-        }
-    }
+ 
+
     </script>
     <title>Templates Page - Acheson Athletics</title>
 </head>
@@ -62,7 +41,18 @@
       </div>
       <button class="prev-page-btn" onclick="goBack()">Badges Page</button>
       <button class="prev-page-btn" onclick="watchVideo()">Video Page</button>
-
+      <script> 
+      function watchVideo() {
+        var response = prompt("Did you watch all the videos? Enter 'yes' or 'no'.");
+        if (response == "yes") {
+          document.getElementById("badgeImage").src = "../assets/award.jpg";
+        } else if (response == "no") {
+          // do nothing or display another message
+        } else {
+          alert("Invalid response. Please enter 'yes' or 'no'.");
+        }
+      }
+    </script>
     <!--Footer-->
     <footer>
         <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
