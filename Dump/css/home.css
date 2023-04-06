@@ -273,3 +273,9 @@ button:hover {
     box-shadow: black 0 10px 20px -10px;
     box-sizing: border-box;
 }
+.profilepic {
+    border: 4px solid rgb(158, 242, 158);
+    border-radius: 100px;
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
+}
