@@ -35,9 +35,8 @@
             const user = userCredential.user;
 
             function writeUserData (email) {
-                const reference = ref(database, 'users/' + user.uid);
     
-                set(reference, {
+                set(ref(database, 'users/' + user.uid), {
                     email: email,
                 })
             }
