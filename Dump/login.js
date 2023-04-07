@@ -36,7 +36,7 @@
 
             function writeUserData (email) {
     
-                set(ref(database, 'users/' + user.uid), {
+                set(ref(database, '/users/' + user.uid), {
                     email: email,
                 })
             }
