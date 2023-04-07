@@ -33,10 +33,11 @@
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
+            const uid = user.uid;
 
             function writeUserData (email) {
     
-                set(ref(database, '/users/' + user.uid), {
+                set(ref(database, '/users/' + uid), {
                     email: email,
                 })
             }
