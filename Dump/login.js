@@ -35,7 +35,7 @@
             const user = userCredential.user;
 
             
-            set(ref(database, '/users/' + user.uid), {
+            set(ref(database, '/users' + user.uid), {
                 email: email,
             })
             
