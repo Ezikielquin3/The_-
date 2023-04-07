@@ -4,29 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/badges.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/badges.css" />
     <title>Badges Page - Acheson Athletics</title>
 </head>
 <body>
     <!--Header-->
     <header>
-        <div id="content"> </div>
-        <script>
-            var el = document.getElementById('content');
-            var content;
-            let SignedIn = true;
-            if (SignedIn == true) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Profile.html">Profile</a><a href="/views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-            }
-            else if (SignedIn == false) {
-                content = '<nav><div class="logo"><a href="/views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="/views/Home.html">Home</a><a href="/views/Videos.html">Videos</a><a href="/views/Articles.html">Articles</a><a href="/views/Social.html">Social</a><a href="/views/Login.html">Login</a></div></nav>';
-            };
-            el.insertAdjacentHTML('afterbegin', content);
-        </script>
-    </header>
-    <!--END-Header-->
+      <div id="content"> </div>
+      <script>
+          var el = document.getElementById('content');
+          var content;
+          let SignedIn = true;
+          if (SignedIn == true) {
+              content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Profile.html">Profile</a><a href="../views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+          }
+          else if (SignedIn == false) {
+              content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Login.html">Login</a></div></nav>';
+          };
+          el.insertAdjacentHTML('afterbegin', content);
+      </script>
+  </header>
+  <!--END-Header-->
 
     <h2>Badges Page</h2>
     <div class="row">
@@ -34,7 +34,7 @@
         <div class="column">
             <h3>Back Badge</h3>
             <div class="div-img">
-              <a href="/views/Back.html">
+              <a href="../views/Back.html">
               <img src="../assets/back.jpg" alt="Back" width="300" height="300" >
             </a>
             </div>
@@ -44,7 +44,7 @@
             <h3>Introduction Badge</h3>
             <div class="div-img">
               <a href="/views/introduction.html">
-              <img src="../assets/intro.png" alt="Bicep" width="300" height="300" >
+              <img src="../assets/biceps.jpg" alt="Bicep" width="300" height="300" >
               </a>
             </div>
           </div>
@@ -53,7 +53,7 @@
             <h3>Legs Badge</h3>
             <div class="div-img">
               <a href="/views/legs.html">
-              <img src="../assets/leg.png" alt="Calf" width="300" height="300" >
+              <img src="../assets/calf.jpg" alt="Calf" width="300" height="300" >
               </a>
             </div>
         </div>
@@ -62,7 +62,7 @@
             <h3>Chest Badge</h3>
             <div class="div-img">
               <a href="/views/Chest.html">
-               <img src="../assets/chest.png" alt="Chest" width="300" height="300" >
+               <img src="../assets/chest.jpg" alt="Chest" width="300" height="300" >
               </a>
               </div>
         </div>
@@ -70,7 +70,7 @@
               <h3>Arms Badge</h3>
               <div class="div-img">
                 <a href="/views/Arms.html">
-                <img src="../assets/arm.png" alt="Tricep" width="300" height="300" >
+                <img src="../assets/triceps.jpg" alt="Tricep" width="300" height="300" >
                 </a>
             </div>
         </div>
@@ -79,7 +79,7 @@
             <h3>Core Badge </h3>
             <div class="div-img">
               <a href="/views/Core.html">
-              <img src="../assets/core.png" alt="Thigh" width="300" height="300" >
+              <img src="../assets/thigh.jpg" alt="Thigh" width="300" height="300" >
               </a>
             </div>
           </div>
@@ -87,9 +87,14 @@
 
     <!--Footer-->
     <footer>
-        <p>©2023 - The_: </p><p><a href="/views/PrivacyPolicy.html">Privacy Policy</a> - <a href="/views/AboutUs.html">About Us</a></p>
-    </footer>
-    <!--END-Footer-->
+      <br>
+      <div class="container">
+          <p>©2023 - The_: </p>
+          <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a>
+          </p>
+      </div>
+  </footer>
+  <!--END-Footer-->
 </body>
 
 </html>
