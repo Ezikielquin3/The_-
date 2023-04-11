@@ -40,4 +40,8 @@
 			display: flex;
 			flex-direction: row-reverse;
 		  }
+		  .member:nth-child(even) .profilepic {
+			float: right;
+			margin-left: 10px;
+		  }
 	
