@@ -78,9 +78,9 @@ signUp.addEventListener('click', (e) => {
     var password = document.getElementById('password').value;
 
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+    .then((email) => {
         // Signed in 
-        const user = userCredential.user;
+        const user = email.user;
 
         alert('user created!');
         // ...
