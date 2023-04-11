@@ -36,4 +36,8 @@
 		.member .info a:hover {
 			text-decoration: underline;
 		}
+		.reverse {
+			display: flex;
+			flex-direction: row-reverse;
+		  }
 	
