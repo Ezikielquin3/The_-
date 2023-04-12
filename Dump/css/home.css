@@ -302,3 +302,20 @@ button:hover {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
 }
+.articlediv {
+    background-color:mintcream;
+    display:inline-block;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
+    line-height: 1.4;
+    padding-top:10px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:10px;
+    min-width:100%;
+}
+.articlecontent {
+    text-indent: 50px;
+}
