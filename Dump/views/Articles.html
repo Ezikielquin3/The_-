@@ -28,144 +28,26 @@
     </header>
     <!--END-Header-->
     <br>
-    <h1 class="center"><Article></Article> Catalog</h1>
+    <h1 class="center"><Article></Article>Article Catalog</h1>
     <br>
-    <table class="littlespace">
+    <table class="space">
         <!--This line pulls the entire table when its ready-->
         <tr id="root"></tr>
     </table>
-    <script src="../videodata.js"></script>
+    <script src="../articledata.js"></script>
     <script>
-        //This grabs the web address, and then shortens it down until it is just the variable, which is then used to push the proper table//
-        var embedid = parent.document.URL.substring(parent.document.URL.indexOf('='), parent.document.URL.length);
-        var buttoncat = embedid.substring(1);
         //Connects with HTML element//
         var root = document.getElementById('root');
+        //Flips the database upside down so that it is ordered newest to oldest
+        data2.reverse();
         //Big if statement checks buttoncat variable to see which category the user picked (if any)//
-        if (buttoncat == 1) {
-            //This filters out the database to only show the chest category//
-            var chestOnly = data.filter(function (entry) {
-                return entry.category === 'Chest';
-            });
-            //This pushes the HTML table//
-            chestOnly.forEach(element => root.insertAdjacentHTML('beforebegin', `
-        <tr>
-            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
-            <td><div class="row">
-                <h2>${element.title}</h2>
-                </div>
-                <div class="row">
-                <h3 class="text${element.category}">${element.category} Category</h3>
-                </div>
-                <div class="row">
-                <p>${element.description}</p>
-                </div>
-            </td>
-            <td></td>
+            data2.forEach(element => root.insertAdjacentHTML('beforebegin', `
+        <tr class="articlerow">
+            <td><a href="../views/ArticlePage.html?myVar=${element.id}" class="sneakylink"><h2>${element.title}</h2>
+                <h4 class=""> Published ${element.date}</h4>
+                <p class="textcutoff2">${element.content}</p>
+            </a></td>
         </tr>`));
-        }
-        else if (buttoncat == 2) {
-            var armsOnly = data.filter(function (entry) {
-                return entry.category === 'Arms';
-            });
-
-            armsOnly.forEach(element => root.insertAdjacentHTML('beforebegin', `
-        <tr>
-            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
-            <td><div class="row">
-                <h2>${element.title}</h2>
-                </div>
-                <div class="row">
-                <h3 class="text${element.category}">${element.category} Category</h3>
-                </div>
-                <div class="row">
-                <p>${element.description}</p>
-                </div>
-            </td>
-            <td></td>
-        </tr>`));
-        }
-        else if (buttoncat == 3) {
-            var backOnly = data.filter(function (entry) {
-                return entry.category === 'Back';
-            });
-
-            backOnly.forEach(element => root.insertAdjacentHTML('beforebegin', `
-        <tr>
-            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
-            <td><div class="row">
-                <h2>${element.title}</h2>
-                </div>
-                <div class="row">
-                <h3 class="text${element.category}">${element.category} Category</h3>
-                </div>
-                <div class="row">
-                <p>${element.description}</p>
-                </div>
-            </td>
-            <td></td>
-        </tr>`));
-        }
-        else if (buttoncat == 4) {
-            var legsOnly = data.filter(function (entry) {
-                return entry.category === 'Legs';
-            });
-
-            legsOnly.forEach(element => root.insertAdjacentHTML('beforebegin', `
-        <tr>
-            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
-            <td><div class="row">
-                <h2>${element.title}</h2>
-                </div>
-                <div class="row">
-                <h3 class="text${element.category}">${element.category} Category</h3>
-                </div>
-                <div class="row">
-                <p>${element.description}</p>
-                </div>
-            </td>
-            <td></td>
-        </tr>`));
-        }
-
-        else if (buttoncat == 5) {
-            var coreOnly = data.filter(function (entry) {
-                return entry.category === 'Core';
-            });
-
-            coreOnly.forEach(element => root.insertAdjacentHTML('beforebegin', `
-        <tr>
-            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
-            <td><div class="row">
-                <h2>${element.title}</h2>
-                </div>
-                <div class="row">
-                <h3 class="text${element.category}">${element.category} Category</h3>
-                </div>
-                <div class="row">
-                <p>${element.description}</p>
-                </div>
-            </td>
-            <td></td>
-        </tr>`));
-        }
-        else {
-            data.forEach(element => root.insertAdjacentHTML('beforebegin', `
-        <tr>
-            <td><a href="../views/VideoPage.html?myVar=${element.id}"><img class="thumbnail${element.category}"src="https://img.youtube.com/vi/${element.id}/mqdefault.jpg"></img></a></td>
-            <td><div class="row">
-                <h2>${element.title}</h2>
-                </div>
-                <div class="row">
-                <h3 class="text${element.category}">${element.category} Category</h3>
-                </div>
-                <div class="row">
-                <p>${element.description}</p>
-                </div>
-            </td>
-            <td></td>
-        </tr>`));
-        };
     </script>
     <br></br>
     <!--Footer-->
