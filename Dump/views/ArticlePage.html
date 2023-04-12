@@ -6,7 +6,7 @@
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/home.css" />
-    <title id="root4">Video Viewer - Acheson Athletics</title>
+    <title>Article Viewer - Acheson Athletics</title>
 </head>
 <body>
     <!--Header-->
@@ -49,7 +49,6 @@
         };
         //This uses the ID to find other fields of the video//
         var tuple = data.find(item => item.id === embedid2);
-        document.getElementById("root4").innerHTML = tuple.title + " - Acheson Athletics";
         document.getElementById("root1").innerHTML = tuple.title + " -";
         document.getElementById("root2").innerHTML = tuple.category + " Category";
         document.getElementById("root2").classList.add('text'+tuple.category);
