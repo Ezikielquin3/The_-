@@ -8,5 +8,7 @@ var data = [
     {"id": "p2xNyx9KJpA", "title": "Overhead Tricep Extensions","category": "Arms",  "description": ""},
     {"id": "x-MtrAYtbDs", "title": "Introduction to Back",      "category": "Back",  "description": ""},
     {"id": "ekfHyVJxBcQ", "title": "Good Mornings",             "category": "Back",  "description": ""},
-    {"id": "6QAl3mBa0qM", "title": "Dumbbell Rows",             "category": "Back",  "description": ""}
+    {"id": "6QAl3mBa0qM", "title": "Dumbbell Rows",             "category": "Back",  "description": ""},
+    {"id": "-WPaMfs878A", "title": "Romanian Deadlifts",        "category": "Legs",  "description": ""},
+    {"id": "1dj_Ojm52zg", "title": "Crunches",                  "category": "Core",  "description": ""}
 ];
