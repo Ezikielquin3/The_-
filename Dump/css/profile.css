@@ -1,4 +1,10 @@
 #profile-pic {
-    border-radius: 50%;
-    float: right;
+    border-radius: 55%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
