@@ -1,3 +1,4 @@
+//Data tuples are organized by category, and then date published, except the intro videos which come first in a category. In the future, I'll add some sorting into the JS to fix this specificity//
 var data = [
     {"id": "GsdSqBPV85Q", "title": "Introduction to Chest",     "category": "Chest", "description": ""},
     {"id": "Nj1U75GbQDY", "title": "Bench Press",               "category": "Chest", "description": ""},
