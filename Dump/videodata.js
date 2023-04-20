@@ -1,3 +1,4 @@
+//Data tuples are organized by category, and then date published, except the intro videos which come first in a category. In the future, I'll add some sorting into the JS to fix this specificity//
 var data = [
     {"id": "GsdSqBPV85Q", "title": "Introduction to Chest",     "category": "Chest", "description": ""},
     {"id": "Nj1U75GbQDY", "title": "Bench Press",               "category": "Chest", "description": ""},
@@ -8,5 +9,7 @@ var data = [
     {"id": "p2xNyx9KJpA", "title": "Overhead Tricep Extensions","category": "Arms",  "description": ""},
     {"id": "x-MtrAYtbDs", "title": "Introduction to Back",      "category": "Back",  "description": ""},
     {"id": "ekfHyVJxBcQ", "title": "Good Mornings",             "category": "Back",  "description": ""},
-    {"id": "6QAl3mBa0qM", "title": "Dumbbell Rows",             "category": "Back",  "description": ""}
+    {"id": "6QAl3mBa0qM", "title": "Dumbbell Rows",             "category": "Back",  "description": ""},
+    {"id": "-WPaMfs878A", "title": "Romanian Deadlifts",        "category": "Legs",  "description": ""},
+    {"id": "1dj_Ojm52zg", "title": "Crunches",                  "category": "Core",  "description": ""}
 ];
