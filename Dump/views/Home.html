@@ -1,152 +1,211 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/home.css" />
-    <link rel="stylesheet" href="../css/nav.css" />
-    <link rel="stylesheet" href="../css/landing.css" />
-    <title>Home Page - Acheson Athletics</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
+  <link rel="stylesheet" href="../css/landing.css" />
+  <title>Home Page - Acheson Athletics</title>
 </head>
+
 <body>
-    <!--Header-->
-    <header>
-      <div id="content"> </div>
-      <script>
-          var el = document.getElementById('content');
-          var content;
-          let SignedIn = true;
-          if (SignedIn == true) {
-              content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Profile.html">Profile</a><a href="../views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-          }
-          else if (SignedIn == false) {
-              content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Login.html">Login</a></div></nav>';
-          };
-          el.insertAdjacentHTML('afterbegin', content);
-      </script>
+  <!--Header-->
+  <header>
+    <div id="content"> </div>
+    <script>
+      var el = document.getElementById('content');
+      var content;
+      let SignedIn = true;
+      if (SignedIn == true) {
+        content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Profile.html">Profile</a><a href="../views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
+      }
+      else if (SignedIn == false) {
+        content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Login.html">Login</a></div></nav>';
+      };
+      el.insertAdjacentHTML('afterbegin', content);
+    </script>
   </header>
   <!--END-Header-->
-<br>
-<h2 class="littlespace">Get Started with Acheson Athletics</h2>
-<p class="littlespace">Check out our videos:</p>
-<br>
-<div class="slideshow-container">
-<a href="../views/Videos.html">
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="../assets/IMG_2330.png" style="width:100%">
-  <div class="text">New Video Every Week</div>
-</div>
+  <br>
+  <h2 class="littlespace">Get Started with Acheson Athletics</h2>
+  <p class="littlespace">Check out our videos:</p>
+  <br>
+  <div class="slideshow-container">
+    <a href="../views/Videos.html">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../assets/IMG_2330.png" style="width:100%">
+        <div class="text">New Video Every Week</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="../assets/IMG_2341.png" style="width:100%">
-  <div class="text">Increasing Your Knowledge about Your Muscles</div>
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../assets/IMG_2341.png" style="width:100%">
+        <div class="text">Increasing Your Knowledge about Your Muscles</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="../assets/IMG_2356.png" style="width:100%">
-  <div class="text">Get Started!</div>
-</div>
-</a>
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3500); // Change image every 3.5 seconds
-}
-</script>
-<br>
-<h2 class="littlespace">News & Updates:</h2>
-<br>
-<div class="littlespace">
-  <div class="row">
-  
-    <div class="column">
-      <a href="../views/Articles.html" class="sneakylink" id="link0">
-    <div class="card">
-      <h3 id="acard0"></h3>
-      <p id="splash0"></p>
-      <p class="quiettext" id="date0"></p>
-    </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../assets/IMG_2356.png" style="width:100%">
+        <div class="text">Get Started!</div>
+      </div>
     </a>
   </div>
-
-  <div class="column">
-    <a href="../views/Articles.html" class="sneakylink" id="link1">
-    <div class="card">
-      <h3 id="acard1"></h3>
-      <p id="splash1"></p>
-      <p class="quiettext" id="date1"></p>
-    </div>
-  </a>
-  </div>
-  
-  <div class="column">
-    <a href="../views/Articles.html" class="sneakylink" id="link2">
-    <div class="card">
-      <h3 id="acard2"></h3>
-      <p id="splash2"></p>
-      <p class="quiettext" id="date2"></p>
-    </div>
-  </a>
-  </div>
-  
-  <div class="column">
-    <a href="../views/Articles.html" class="sneakylink" id="link3">
-    <div class="card">
-      <h3 id="acard3"></h3>
-      <p id="splash3"></p>
-      <p class="quiettext" id="date3"></p>
-    </div>
-  </a>
-  </div>
-</div>
-</div>
-
-<br>
-<script src="../articledata.js"></script>
-<script>
-  data2.reverse();
-  for(let i = 0; i < 4; i++){
-    document.getElementById("acard"+[i]).innerHTML = data2[i].title;
-    document.getElementById("splash"+[i]).innerHTML = data2[i].splash;
-    document.getElementById("date"+[i]).innerHTML = data2[i].date;
-  };
-</script>
-<!--Footer-->
-<footer>
   <br>
-  <div class="container">
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+    }
+  </script>
+  <br>
+  <!--New videos section-->
+  <!-- <h2 class="littlespace">Newest Videos</h2>
+  <br>
+  <div class="littlespace">
+    <div class="row">
+
+      <div class="column">
+        <a href="../views/Videos.html" class="sneakylink" id="link0">
+          <h3 id="title0" style="margin-left:2%; position:absolute"></h3>
+          <div class="center">
+            <img class="thumbnail0" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="../views/Videos.html" class="sneakylink" id="link1">
+          <h3 id="title1" style="position:absolute"></h3>
+          <img class="thumbnail1" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="../views/Videos.html" class="sneakylink" id="link2">
+          <h3 id="title2" style="position:absolute"></h3>
+          <img class="thumbnail2" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="../views/Videos.html" class="sneakylink" id="link3">
+          <h3 id="title3" style="position:absolute"></h3>
+          <img class="thumbnail3" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+        </a>
+      </div>
+    </div>
+  </div>
+  <br> -->
+
+  <!--News and updates section-->
+  <h2 class="littlespace">News & Updates:</h2>
+  <br>
+  <div class="littlespace">
+    <div class="row">
+
+      <div class="column">
+        <a href="../views/Articles.html" class="sneakylink" id="link0">
+          <div class="card">
+            <h3 id="acard0"></h3>
+            <p id="splash0"></p>
+            <p class="quiettext" id="date0"></p>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="../views/Articles.html" class="sneakylink" id="link1">
+          <div class="card">
+            <h3 id="acard1"></h3>
+            <p id="splash1"></p>
+            <p class="quiettext" id="date1"></p>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="../views/Articles.html" class="sneakylink" id="link2">
+          <div class="card">
+            <h3 id="acard2"></h3>
+            <p id="splash2"></p>
+            <p class="quiettext" id="date2"></p>
+          </div>
+        </a>
+      </div>
+
+      <div class="column">
+        <a href="../views/Articles.html" class="sneakylink" id="link3">
+          <div class="card">
+            <h3 id="acard3"></h3>
+            <p id="splash3"></p>
+            <p class="quiettext" id="date3"></p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <script src="../articledata.js"></script>
+  <script>
+    //sorts the data from newest to oldest//
+    data2.reverse();
+    //populates the cards with data from the 4 most recent articles//
+    for (let i = 0; i < 4; i++) {
+      document.getElementById("acard" + [i]).innerHTML = data2[i].title;
+      document.getElementById("splash" + [i]).innerHTML = data2[i].splash;
+      document.getElementById("date" + [i]).innerHTML = data2[i].date;
+    };
+  </script>
+  <script src="../videodata.js"></script>
+  <script>
+    //sorts the data by the order field//
+    data.sort((a, b) => {
+    return a.order - b.order;
+    });
+    //reverses the data sort so that the highest values are first//
+    data.reverse();
+    //populates the cards with data from the 4 most recent videos//
+    for (let i = 0; i < 4; i++) {
+      document.getElementById("title" + [i]).innerHTML ="&nbsp;&nbsp;" + data[i].title;
+      document.getElementById("title" + [i]).setAttribute('class', "text" + data[i].category);
+    };
+  </script>
+  <!--Footer-->
+  <footer>
+    <br>
+    <div class="container">
       <p>©2023 - The_: </p>
       <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a>
       </p>
-  </div>
-</footer>
-<!--END-Footer-->
+    </div>
+  </footer>
+  <!--END-Footer-->
 </body>
-</html> 
+
+</html>
