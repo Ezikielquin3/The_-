@@ -28,44 +28,31 @@
   </header>
   <!--END-Header-->
 
-    <h2>Follow us on Social media</h2>
-    <div class="row">
-      
-        <div class="column">
-            <h3>Facebook</h3>
-            <div class="img">
-              <button class ="btn-1"> <img src="../assets/facebook.jpg" alt="Facebook" width="250" height="250" > </button>
-              <!--<img src= "../assets/colorFB.jpg" alt="FacebookColor" width="250" height="250" class="hover_img"> -->
-            </div>
-          </div>
-      
-        <div class="column">
-            <h3>Instagram</h3>
-            <div class="img">
-              <button class ="btn-2"><img src="../assets/instagram.jpg" alt="Instagram" width="250" height="250" ></button>
-              <!-- <img src= "../assets/instagramColor.jpg" alt="InstagramColor" width="250" height="250" class="hover_img"> -->
-            </div>
-          </div>
-        
-        <div class="column">
-            <h3>Twitter</h3>
-            <div class="img">
-              <button class ="btn-3"> <img src="../assets/twitter.jpg" alt="Twitter" width="250" height="250" > </button>
-              <!-- <img src= "../assets/twitterColor.jpg" alt="TwitterColor" width="250" height="250" class="hover_img">-->
-            </div>
-        </div>
-        
-       
-    </div>
-
-    <!--Footer-->
-    <footer>
-      <br>
-      <div class="container">
-          <p>©2023 - The_: </p>
-          <p><a href="../views/PrivacyPolicy.html">Privacy Policy</a> - <a href="../views/AboutUs.html">About Us</a>
-          </p>
-      </div>
+    
+  <div>
+    <h3>Post a Comment:</h3>
+    <form>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea>
+  
+      <p class="anonymous">
+        <input type="checkbox" id="anonymous" name="anonymous" value="1">
+        <label for="anonymous">Post Anonymously</label>
+      </p>
+  
+      <button type="submit">Submit</button>
+    </form>
+  
+    <ul class="comments">
+      <!-- Example comment -->
+      <li>
+        <span class="author">Anonymous</span>
+        <span class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit sapien quis leo convallis, in placerat erat tincidunt.</span>
+      </li>
+    </ul>
+  </div>
+  
+    
   </footer>
   <!--END-Footer-->
 </body>
