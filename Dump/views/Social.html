@@ -29,18 +29,29 @@
   <!--END-Header-->
 
     
-    <div>
-      <h3>Leave a Comment:</h3>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-    
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" required></textarea>
-    
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+  <div>
+    <h3>Post a Comment:</h3>
+    <form>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea>
+  
+      <p class="anonymous">
+        <input type="checkbox" id="anonymous" name="anonymous" value="1">
+        <label for="anonymous">Post Anonymously</label>
+      </p>
+  
+      <button type="submit">Submit</button>
+    </form>
+  
+    <ul class="comments">
+      <!-- Example comment -->
+      <li>
+        <span class="author">Anonymous</span>
+        <span class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit sapien quis leo convallis, in placerat erat tincidunt.</span>
+      </li>
+    </ul>
+  </div>
+  
     
   </footer>
   <!--END-Footer-->
