@@ -30,5 +30,18 @@ Now within the VS code console got into Terminal -- Make sure you use a GitBash 
 
 
                 //How I fixed our view referencing:
-                I just deleted the /dump/ reference because the code was looking for /dump/ within /dump/. The reference was too broad and so it didn't work
-                the same applies to /views/
+                Initially, we had view references like this: /dump/views/Home.html
+
+                This was resulting in errors, as the code was attempting to find a dump folder within dump. This occurred because dump was assigned as the public folder, 
+                therefore anything outside of dump doesn't exist. In fact, dump doesn't even exist in the code's case. 
+
+                With this in mind, any references to a file from within just the dump folder (i.e. index.html) should look like this: views/Home.html
+
+                However, if you are trying to make a reference to a file from a file within another folder within dump, you should format your references like this: ../views/Home.html
+
+                This is because if you were to format it like you would within index.html, it would look for a folder within the folder that file is located. 
+                For example, if you were trying to reference home.css from Home.html, using css/home.html as the reference, It would look for a folder called "css" within the views folder that 
+                Home.html is in. Instead, using ../css/home.css tells the code to look for a folder called css within the root folder (which is dump btw).
+
+                To wrap up, to reference a file from a file within a folder within dump, use ../file.html or ../folder/file.html
+                and to reference a file from a file within the root folder (dump), use file.html or folder/file.html
