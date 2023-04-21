@@ -1,2 +1,34 @@
+First Create Firebase project 	
+1: Enter project name 
+2: Choose whether you want google analytics 
+3: Add a web app 
+4: Is where you grab the sdk package for your firebase java script file 
+
 Documentation on getting our website to be deployed live on internet for public using this domain
-    https://achesonathletics.com/
+   https://achesonathletics.com
+First went to google domains and bought< .com > for $12 for Achesonathletics 
+Followed this YouTube tutorial with some tweaks to it along the way https://youtu.be/VTltcz0l5Ho
+
+1.	Login into firebase console for project console 
+2.	Go to hosting function 
+3.	Go to Add custom domain 
+4.	Type in purchased domain achsesonathletics.com
+5.	Verify address 
+6.	Then in the Quick Set up copy record type and value from that window
+7.	Go back to Google domains 	
+    a.	Go into DNS 
+    b.	Manage a custom record 
+    c.	For Host name enter achesonathletics.com, then for record type put in A, then for data put in the value copied over from firebase 
+    d.	Save 
+
+Now within the VS code console got into Terminal -- Make sure you use a GitBash Terminal 
+    Any team memeber within project gitbash terminal put in ---- firebase deploy
+        Firebase will scan in all files in public folder and deploy it to the hosting site on project 
+        We originally had an issue with how the deploy was reading in files because it wasn’t  referencing our Dump folder(public folder) properly 
+
+
+
+
+                //How I fixed our view referencing:
+                I just deleted the /dump/ reference because the code was looking for /dump/ within /dump/. The reference was too broad and so it didn't work
+                the same applies to /views/
