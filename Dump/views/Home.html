@@ -89,48 +89,57 @@
   <div class="littlespace">
     <div class="row">
       <div class="column">
+        <div class="homeHover">
         <a href="../views/Videos.html" class="sneakylink" id="vidlink0">
-          <h3 id="title0" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
+          <h3 id="title0"></h3>
           <div class="center">
-            <img id="thumbnail0" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+            <img id="thumbnail0" class="homeThumbnail" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
           </div>
         </a>
       </div>
+      </div>
       <div class="column">
+        <div class="homeHover">
         <a href="../views/Videos.html" class="sneakylink" id="vidlink1">
-          <h3 id="title1" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
+          <h3 id="title1"></h3>
           <div class="center">
-            <img id="thumbnail1" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+            <img id="thumbnail1" class="homeThumbnail" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
           </div>
         </a>
       </div>
+      </div>
       <div class="column">
+        <div class="homeHover">
         <a href="../views/Videos.html" class="sneakylink" id="vidlink2">
-          <h3 id="title2" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
+          <h3 id="title2"></h3>
           <div class="center">
-            <img id="thumbnail2" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+            <img id="thumbnail2" class="homeThumbnail" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
           </div>
         </a>
       </div>
+      </div>
       <div class="column">
+        <div class="homeHover">
         <a href="../views/Videos.html" class="sneakylink" id="vidlink3">
-          <h3 id="title3" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
+          <h3 id="title3"></h3>
           <div class="center">
-            <img id="thumbnail3" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+            <img id="thumbnail3" class="homeThumbnail" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
           </div>
         </a>
+      </div>
       </div>
     </div>
   </div>
   <br>
-
+  <br>
+  <br>
   <!--News and updates section-->
   <h2 class="littlespace">News & Updates:</h2>
   <br>
   <div class="littlespace">
     <div class="row">
-
       <div class="column">
+        <div class="homeHover">
         <a href="" class="sneakylink" id="link0">
           <div class="card">
             <h3 id="acard0"></h3>
@@ -139,8 +148,9 @@
           </div>
         </a>
       </div>
-
+      </div>
       <div class="column">
+        <div class="homeHover">
         <a href="" class="sneakylink" id="link1">
           <div class="card">
             <h3 id="acard1"></h3>
@@ -149,8 +159,9 @@
           </div>
         </a>
       </div>
-
+      </div>
       <div class="column">
+        <div class="homeHover">
         <a href="" class="sneakylink" id="link2">
           <div class="card">
             <h3 id="acard2"></h3>
@@ -159,8 +170,9 @@
           </div>
         </a>
       </div>
-
+      </div>
       <div class="column">
+        <div class="homeHover">
         <a href="" class="sneakylink" id="link3">
           <div class="card">
             <h3 id="acard3"></h3>
@@ -169,9 +181,11 @@
           </div>
         </a>
       </div>
+      </div>
     </div>
   </div>
-
+  <br>
+  <br>
   <br>
   <script src="../articledata.js"></script>
   <script>
@@ -195,8 +209,8 @@
     data.reverse();
     //populates the cards with data from the 4 most recent videos//
     for (let i = 0; i < 4; i++) {
-      document.getElementById("title" + [i]).innerHTML ="&nbsp;&nbsp;" + data[i].title;
-      document.getElementById("title" + [i]).setAttribute('class', "text" + data[i].category);
+      document.getElementById("title" + [i]).innerHTML ="&nbsp;&nbsp;" + data[i].title + "&nbsp;&nbsp;";
+      document.getElementById("title" + [i]).setAttribute('class', "home" + data[i].category);
       document.getElementById("thumbnail" + [i]).src="https://img.youtube.com/vi/" + data[i].id +"/mqdefault.jpg";
       document.getElementById("vidlink" + [i]).href = "../views/VideoPage.html?myVar=" + data[i].id;
     };

@@ -321,3 +321,58 @@ button:hover {
     padding-left: 5%;
     padding-right: 5%;
 }
+.homeChest {
+    margin-left:11.3%; 
+    margin-top: 5px; 
+    position:absolute;
+    background-color: rgb(85, 172, 85);
+    border-radius:10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.homeArms {
+    margin-left:11.3%; 
+    margin-top: 5px; 
+    position:absolute;
+    background-color: rgb(216, 97, 74);
+    border-radius:10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.homeCore {
+    margin-left:11.3%; 
+    margin-top: 5px; 
+    position:absolute;
+    background-color: rgb(222, 132, 189);
+    border-radius:10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.homeLegs {
+    margin-left:11.3%; 
+    margin-top: 5px; 
+    position:absolute;
+    background-color: rgb(73 156 223);
+    border-radius:10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.homeBack {
+    margin-left:11.3%; 
+    margin-top: 5px; 
+    position:absolute;
+    background-color: rgb(183, 101, 194);
+    border-radius:10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.homeThumbnail {
+    box-shadow: black 0 10px 20px -10px;
+    box-sizing: border-box;
+}
+.homeHover {
+    transform: scale(1);
+}
+.homeHover:hover {
+    transform: scale(1.05);
+}
