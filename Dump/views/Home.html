@@ -84,43 +84,45 @@
   </script>
   <br>
   <!--New videos section-->
-  <!-- <h2 class="littlespace">Newest Videos</h2>
+  <h2 class="littlespace">Newest Videos</h2>
   <br>
   <div class="littlespace">
     <div class="row">
-
       <div class="column">
-        <a href="../views/Videos.html" class="sneakylink" id="link0">
-          <h3 id="title0" style="margin-left:2%; position:absolute"></h3>
+        <a href="../views/Videos.html" class="sneakylink" id="vidlink0">
+          <h3 id="title0" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
           <div class="center">
-            <img class="thumbnail0" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+            <img id="thumbnail0" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
           </div>
         </a>
       </div>
-
       <div class="column">
-        <a href="../views/Videos.html" class="sneakylink" id="link1">
-          <h3 id="title1" style="position:absolute"></h3>
-          <img class="thumbnail1" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+        <a href="../views/Videos.html" class="sneakylink" id="vidlink1">
+          <h3 id="title1" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
+          <div class="center">
+            <img id="thumbnail1" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+          </div>
         </a>
       </div>
-
       <div class="column">
-        <a href="../views/Videos.html" class="sneakylink" id="link2">
-          <h3 id="title2" style="position:absolute"></h3>
-          <img class="thumbnail2" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+        <a href="../views/Videos.html" class="sneakylink" id="vidlink2">
+          <h3 id="title2" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
+          <div class="center">
+            <img id="thumbnail2" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+          </div>
         </a>
       </div>
-
       <div class="column">
-        <a href="../views/Videos.html" class="sneakylink" id="link3">
-          <h3 id="title3" style="position:absolute"></h3>
-          <img class="thumbnail3" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+        <a href="../views/Videos.html" class="sneakylink" id="vidlink3">
+          <h3 id="title3" style="margin-left:2%; margin-top: 5px; position:absolute"></h3>
+          <div class="center">
+            <img id="thumbnail3" src="https://img.youtube.com/vi/GsdSqBPV85Q/mqdefault.jpg"></img>
+          </div>
         </a>
       </div>
     </div>
   </div>
-  <br> -->
+  <br>
 
   <!--News and updates section-->
   <h2 class="littlespace">News & Updates:</h2>
@@ -129,7 +131,7 @@
     <div class="row">
 
       <div class="column">
-        <a href="../views/Articles.html" class="sneakylink" id="link0">
+        <a href="" class="sneakylink" id="link0">
           <div class="card">
             <h3 id="acard0"></h3>
             <p id="splash0"></p>
@@ -139,7 +141,7 @@
       </div>
 
       <div class="column">
-        <a href="../views/Articles.html" class="sneakylink" id="link1">
+        <a href="" class="sneakylink" id="link1">
           <div class="card">
             <h3 id="acard1"></h3>
             <p id="splash1"></p>
@@ -149,7 +151,7 @@
       </div>
 
       <div class="column">
-        <a href="../views/Articles.html" class="sneakylink" id="link2">
+        <a href="" class="sneakylink" id="link2">
           <div class="card">
             <h3 id="acard2"></h3>
             <p id="splash2"></p>
@@ -159,7 +161,7 @@
       </div>
 
       <div class="column">
-        <a href="../views/Articles.html" class="sneakylink" id="link3">
+        <a href="" class="sneakylink" id="link3">
           <div class="card">
             <h3 id="acard3"></h3>
             <p id="splash3"></p>
@@ -180,6 +182,7 @@
       document.getElementById("acard" + [i]).innerHTML = data2[i].title;
       document.getElementById("splash" + [i]).innerHTML = data2[i].splash;
       document.getElementById("date" + [i]).innerHTML = data2[i].date;
+      document.getElementById("link" + [i]).href = "../views/ArticlePage.html?myVar=" + data2[i].id;
     };
   </script>
   <script src="../videodata.js"></script>
@@ -194,6 +197,8 @@
     for (let i = 0; i < 4; i++) {
       document.getElementById("title" + [i]).innerHTML ="&nbsp;&nbsp;" + data[i].title;
       document.getElementById("title" + [i]).setAttribute('class', "text" + data[i].category);
+      document.getElementById("thumbnail" + [i]).src="https://img.youtube.com/vi/" + data[i].id +"/mqdefault.jpg";
+      document.getElementById("vidlink" + [i]).href = "../views/VideoPage.html?myVar=" + data[i].id;
     };
   </script>
   <!--Footer-->
