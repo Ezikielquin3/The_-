@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/social.css" />
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()) {
+          $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
+          $comment = $row["comment"];
+    
+          echo "<li><span class='author'>$author</span> $comment</li>";
+      }
+    } else {
+      echo '<li><p>No comments yet</p></li>';
+    }
+    
+
     <title>Social Page - Acheson Athletics</title>
   </head>
   <body>
@@ -44,6 +56,9 @@
     </form>
 
     <ul class="comments">
+
+     
+      
       <?php
       // Define the database connection credentials
       $servername = "localhost";
