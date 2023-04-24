@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewpoint" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/social.css" />
     <title>Social Page - Acheson Athletics</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Header-->
     <header>
-      <div id="content"> </div>
+      <div id="content"></div>
       <script>
-          var el = document.getElementById('content');
-          var content;
-          let SignedIn = true;
-          if (SignedIn == true) {
-              content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Profile.html">Profile</a><a href="../views/Settings.html">Settings</a><button>Sign Out</button></div></nav>'
-          }
-          else if (SignedIn == false) {
-              content = '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Login.html">Login</a></div></nav>';
-          };
-          el.insertAdjacentHTML('afterbegin', content);
+        var el = document.getElementById("content");
+        var content;
+        let SignedIn = true;
+        if (SignedIn == true) {
+          content =
+            '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Profile.html">Profile</a><a href="../views/Settings.html">Settings</a><button>Sign Out</button></div></nav>';
+        } else if (SignedIn == false) {
+          content =
+            '<nav><div class="logo"><a href="../views/Home.html">Acheson Athletics</a></div><div class="nav-items"><a href="../views/Home.html">Home</a><a href="../views/Videos.html">Videos</a><a href="../views/Articles.html">Articles</a><a href="../views/Social.html">Social</a><a href="../views/Login.html">Login</a></div></nav>';
+        }
+        el.insertAdjacentHTML("afterbegin", content);
       </script>
-  </header>
-  <!--END-Header-->
-
-    
+    </header>
+    <!--END-Header-->
+    <!--Social Section-->
+<section>
   <div>
     <h3>Post a Comment:</h3>
-    <form>
+    <form method="POST" action="submit_comment.php">
       <label for="comment">Comment:</label>
       <textarea id="comment" name="comment" required></textarea>
-  
+
       <p class="anonymous">
-        <input type="checkbox" id="anonymous" name="anonymous" value="1">
+        <input type="checkbox" id="anonymous" name="anonymous" value="1" />
         <label for="anonymous">Post Anonymously</label>
       </p>
-  
+
       <button type="submit">Submit</button>
     </form>
-  
-    <ul class="comments">
-      <!-- Example comment -->
-      <li>
-        <span class="author">Anonymous</span>
-        <span class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit sapien quis leo convallis, in placerat erat tincidunt.</span>
-      </li>
-    </ul>
-  </div>
-  
-    
-  </footer>
-  <!--END-Footer-->
-</body>
 
-</html>
+    <ul class="comments">
+      <?php
+      // Define the database connection credentials
+      $servername = "localhost";
+      $username = "your_username";
+      $password = "your_password";
+      $dbname = "your_database_name";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      // Retrieve comments from the database and display them
+      $sql = "SELECT * FROM comments";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+              $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
+              $comment = $row["comment"];
+
+              echo "<li><span class='author'>$author</span> $comment</li>";
+          }
+      } else {
+        echo "<li><p>No comments yet</p
