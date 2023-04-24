@@ -6,16 +6,7 @@
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/social.css" />
-    if ($result->num_rows > 0) {
-      while($row = $result->fetch_assoc()) {
-          $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
-          $comment = $row["comment"];
-    
-          echo "<li><span class='author'>$author</span> $comment</li>";
-      }
-    } else {
-      echo '<li><p>No comments yet</p></li>';
-    }
+  
     
 
     <title>Social Page - Acheson Athletics</title>
@@ -59,39 +50,4 @@
 
      
       
-      <?php
-      // Define the database connection credentials
-      $servername = "localhost";
-      $username = "your_username";
-      $password = "your_password";
-      $dbname = "your_database_name";
-
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
-
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
-
-      // Retrieve comments from the database and display them
-      $sql = "SELECT * FROM comments";
-      $result = $conn->query($sql);
-
-      if ($result->num_rows > 0) {
-          while($row = $result->fetch_assoc()) {
-              $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
-              $comment = $row["comment"];
-
-              echo "<li><span class='author'>$author</span> $comment</li>";
-          }
-      } else {
-        echo <li><p>No comments yet</p> </li>
-        }
-  
-   CREATE TABLE comments (
-  id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  comment TEXT NOT NULL,
-  anonymous TINYINT(1) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+      

@@ -1,28 +1,40 @@
 <?php
-// Define the database connection credentials
-$servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database_name";
+ if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
+        $comment = $row["comment"];
+  
+        echo "<li><span class='author'>$author</span> $comment</li>";
+    }
+  } else {
+    echo '<li><p>No comments yet</p></li>';
+  }
+      // Define the database connection credentials
+      $servername = "localhost";
+      $username = "your_username";
+      $password = "your_password";
+      $dbname = "your_database_name";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
 
-// Get the comment data from the form
-$comment = $_POST["comment"];
-$anonymous = isset($_POST["anonymous"]) ? 1 : 0;
+      // Retrieve comments from the database and display them
+      $sql = "SELECT * FROM comments";
+      $result = $conn->query($sql);
 
-// Prepare and execute the SQL statement to insert the comment into the database
-$stmt = $conn->prepare("INSERT INTO comments (comment, anonymous) VALUES (?, ?)");
-$stmt->bind_param("si", $comment, $anonymous);
-$stmt->execute();
+      if ($result->num_rows > 0) {
+          while($row = $result->fetch_assoc()) {
+              $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
+              $comment = $row["comment"];
 
-// Close the database connection
-$stmt->close();
-$conn->close();
-?>
+              echo "<li><span class='author'>$author</span> $comment</li>";
+          }
+      } else {
+        echo <li><p>No comments yet</p> </li>
+        }
+  ?>
