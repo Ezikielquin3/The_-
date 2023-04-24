@@ -14,16 +14,22 @@
       window.location.href = "Videos?myVar=3";
     }</script>
   <script> 
-    function clicked() {
-      var response = prompt("Did you watch all the videos? Enter 'yes' or 'no'.");
-      if (response == "yes") {
+   function clicked() {
+    var response = prompt("Did you watch all the videos? Enter 'yes' or 'no'.");
+    if (response == "yes") {
         document.getElementById("noaward").src = "../assets/award.png";
-      } else if (response == "no") {
+        fetch('/save_response', {
+            method: 'POST',
+            body: new URLSearchParams({
+                'response': response
+            })
+        });
+    } else if (response == "no") {
         // do nothing 
-      } else {
+    } else {
         alert("Invalid response. Please enter 'yes' or 'no'.");
-      }
     }
+}
   </script>    
     <title>Back Badge - Acheson Athletics</title>
 </head>
