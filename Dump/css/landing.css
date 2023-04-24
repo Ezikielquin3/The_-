@@ -22,6 +22,12 @@ img {
     box-sizing: border-box;
 }
 
+.slideshow-img {
+  width:100%
+}
+.slideshow-img:hover {
+  border: 2px solid white;
+}
 /* Caption text */
 .text {
   color: #f2f2f2;

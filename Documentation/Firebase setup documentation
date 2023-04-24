@@ -1,6 +1,6 @@
-First make sure you have node installed, it is app that allows VS code to udnerstnad github commannds 
+First make sure you have node installed, it is app that allows VS code to understand github commannds 
 
-In the terminal in your vs code make sure you run code through git bash terminal ( found less errors in this terminal instead of normal one 
+In the terminal in vs project make sure you run code through git bash terminal ( found less errors in this terminal instead of normal one )
 
 The rest is code and in parathesisis it is remarks on the code 
 
@@ -61,6 +61,3 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 
-//How I fixed our view referencing:
-I just deleted the /dump/ reference because the code was looking for /dump/ within /dump/. The reference was too broad and so it didn't work
-The same applies to /views/

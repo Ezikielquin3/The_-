@@ -1,0 +1,47 @@
+First Create Firebase project 	
+1: Enter project name 
+2: Choose whether you want google analytics 
+3: Add a web app 
+4: Is where you grab the sdk package for your firebase java script file 
+
+Documentation on getting our website to be deployed live on internet for public using this domain
+   https://achesonathletics.com
+First went to google domains and bought< .com > for $12 for Achesonathletics 
+Followed this YouTube tutorial with some tweaks to it along the way https://youtu.be/VTltcz0l5Ho
+
+1.	Login into firebase console for project console 
+2.	Go to hosting function 
+3.	Go to Add custom domain 
+4.	Type in purchased domain achsesonathletics.com
+5.	Verify address 
+6.	Then in the Quick Set up copy record type and value from that window
+7.	Go back to Google domains 	
+    a.	Go into DNS 
+    b.	Manage a custom record 
+    c.	For Host name enter achesonathletics.com, then for record type put in A, then for data put in the value copied over from firebase 
+    d.	Save 
+
+Now within the VS code console got into Terminal -- Make sure you use a GitBash Terminal 
+    Any team memeber within project gitbash terminal put in ---- firebase deploy
+        Firebase will scan in all files in public folder and deploy it to the hosting site on project 
+        We originally had an issue with how the deploy was reading in files because it wasn’t  referencing our Dump folder(public folder) properly 
+
+
+
+
+                //How I fixed our view referencing:
+                Initially, we had view references like this: /dump/views/Home.html
+
+                This was resulting in errors, as the code was attempting to find a dump folder within dump. This occurred because dump was assigned as the public folder, 
+                therefore anything outside of dump doesn't exist. In fact, dump doesn't even exist in the code's case. 
+
+                With this in mind, any references to a file from within just the dump folder (i.e. index.html) should look like this: views/Home.html
+
+                However, if you are trying to make a reference to a file from a file within another folder within dump, you should format your references like this: ../views/Home.html
+
+                This is because if you were to format it like you would within index.html, it would look for a folder within the folder that file is located. 
+                For example, if you were trying to reference home.css from Home.html, using css/home.html as the reference, It would look for a folder called "css" within the views folder that 
+                Home.html is in. Instead, using ../css/home.css tells the code to look for a folder called css within the root folder (which is dump btw).
+
+                To wrap up, to reference a file from a file within a folder within dump, use ../file.html or ../folder/file.html
+                and to reference a file from a file within the root folder (dump), use file.html or folder/file.html
