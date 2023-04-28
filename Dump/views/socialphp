@@ -1,41 +1,25 @@
 <?php
- if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
-        $comment = $row["comment"];
-  
-        echo "<li><span class='author'>$author</span> $comment</li>";
-    }
-  } else {
-    echo '<li><p>No comments yet</p></li>';
-  }
-      // Define the database connection credentials
-      $servername = "localhost";
-      $username = "your_username";
-      $password = "your_password";
-      $dbname = "your_database_name";
+// Check if the form was submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Connect to the database
+  $db_host = 'localhost';
+  $db_name = 'your_database_name';
+  $db_user = 'your_database_username';
+  $db_pass = 'your_database_password';
+  $conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
 
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
+  // Prepare the SQL statement
+  $anonymous = isset($_POST['anonymous']) ? 1 : 0;
+  $comment = $_POST['comment'];
+  $stmt = $conn->prepare("INSERT INTO comments (comment, anonymous) VALUES (:comment, :anonymous)");
 
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
+  // Bind the parameters and execute the statement
+  $stmt->bindParam(':comment', $comment);
+  $stmt->bindParam(':anonymous', $anonymous);
+  $stmt->execute();
 
-      // Retrieve comments from the database and display them
-      $sql = "SELECT * FROM comments";
-      $result = $conn->query($sql);
-
-      if ($result->num_rows > 0) {
-          while($row = $result->fetch_assoc()) {
-              $author = $row["anonymous"] == 1 ? "Anonymous" : $row["author"];
-              $comment = $row["comment"];
-
-              echo "<li><span class='author'>$author</span> $comment</li>";
-          }
-      } else {
-        echo "<li><p>No comments yet</p></li>";
-
-        }
-  ?>
+  // Redirect back to the social page
+  header('Location: ../views/Social.html');
+  exit();
+}
+?>
