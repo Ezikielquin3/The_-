@@ -1,3 +1,10 @@
+This file is the orginal java script file I tried configuring for calling authtication and database settings from firebase using browser modules 
+The purpose was to create a link to this with the Login page sending user auth information to firebase and store it in the realtime database 
+Bu Meh and I utimiatley made updates (since this wasnt functional and had many errors) to this along the way but main sturcutre came from this JS File
+
+
+
+SDK 
 var firebaseConfig = {
     apiKey: "AIzaSyDy-YwzZAD-7kwfXJIDkYyl-pChGqOdr54",
     authDomain: "the-950ec.firebaseapp.com",
