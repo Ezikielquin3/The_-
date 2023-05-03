@@ -4,9 +4,9 @@ In the terminal in vs project make sure you run code through git bash terminal (
 
 The rest is code and in parathesisis it is remarks on the code 
 
-npm install firebase 
+<npm install  >
 
-firebase Login (Check yes if you want to proceed) 
+<firebase Login>(Check yes if you want to proceed) 
 
 Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. Realtime Database: Configure a security rules file for Realtime Database and (optionally) provision default instance, Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
 
