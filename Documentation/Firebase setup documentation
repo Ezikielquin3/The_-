@@ -2,11 +2,14 @@ First make sure you have node installed, it is app that allows VS code to unders
 
 In the terminal in vs project make sure you run code through git bash terminal ( found less errors in this terminal instead of normal one )
 
-The rest is code and in parathesisis it is remarks on the code 
+The rest is code are in < > and ran in vs code terminal 
 
-<npm install  >
+<npm install- g >
+<npm install -g firebase-tools> 
 
-<firebase Login>(Check yes if you want to proceed) 
+<firebase Login>(Check yes if you want to proceed andit will push to window where it will ask you to sign in with the firebase web app created) 
+
+<firebase init>
 
 Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. Realtime Database: Configure a security rules file for Realtime Database and (optionally) provision default instance, Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
 
