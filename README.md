@@ -29,6 +29,12 @@ This web application has been initiated in order to educate our target market in
         * Login.js - the file that calls the user auth info from login page in views, to firebase authetication system 
     * Index.html - the landing page for the website and firebase will deploy and intitilaze to the host url 
 
-
+## How to run the app locally
+Our website is fully deployed and can be reached from any web browser at "achesonathletics.com". However, if you wish to run our web app locally, please follow the steps below:
+1) On the explorer side bar in Visual Studio Code, click on index.html in the "Dump" folder.
+2) Click the "Run" button on the ribbon at the top of Visual Studio Code.
+3) Click the "Run Without Debugging" option from the drop-down menu.
+4) A few web browser options will be available. Select your favorite web browser.
+5) The local page should open from your chosen web browser.
 
 
