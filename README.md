@@ -1,2 +1,6 @@
 # The_-
-## Project 
+Developers: 
+*Bu Meh
+*Ezikiel Quinones
+*Thomas Avinger
+*Kyle Longaker 
