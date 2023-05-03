@@ -1,0 +1,6 @@
+THE 2 project – demo
+
+Downloaded VS code and node.js, clone github and created firebase account  — 
+Go to GitBash terminal to install npm 
+  < 
+
