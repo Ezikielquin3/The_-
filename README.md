@@ -14,6 +14,11 @@ This web application has been initiated inorder to educate out target market in 
     * Firebase Realtime database
 * Visual Studio Code
 
-Documentations will be in the document folder
+## Folders
+* Documentation
+    * documentation of the project setup and functionality
+* Dump
+    * public folder
+
 
 
