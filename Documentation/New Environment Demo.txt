@@ -1,6 +1,107 @@
 THE 2 project – demo
 
 Downloaded VS code and node.js, clone github and created firebase account  — 
-Go to GitBash terminal to install npm 
-  < 
+Go to GitBash terminal in the VS code to install npm 
+ ---------
+ Install NPM - node modules
+  <npm install -g> //installing npm
+  <npm install -g firebase-tools> //installing firebase
+  <firebase login> //login to firebase
+  
+  ---------
+  Installing Firebase to the VS Code
+  
+  ? Allow Firebase to collect CLI and Emulator Suite usage and error reporting information? Yes
+  
+  After entering Y (yes), you will need to sign in to firebase on the broswer -- VS code will pull it up
+  
+  ----------
+  <firebase init> //this will initialize firebase project
+  
+  Select feature: 
+   - Realtime Database
+   - Firestore
+   - Hosting: configure files for firebase hosting and (optionally) set up GitHub Action deploys
+   - Hosting: set up GitHub Action deploys
+   
+  Use an existing project if you have one and proceed...
+  
+  Initialized Realtime database if you have not done so. 
+  Use the <database.rules.json> for the reamtine database security rules file
+  
+  ----------
+  Create a login HTML and css, add code to the login html page to initialize authetication
+  
+  Using the CND's SDK configuration in firebase app -- import the configuration to the bottom of the html page
+  -----------
+  
+  import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+ // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyANwJD3hPmAFHeIKZ0NQWbvOpzbWgh6ytc",
+    authDomain: "the2-9d18b.firebaseapp.com",
+    databaseURL: "https://the2-9d18b-default-rtdb.firebaseio.com",
+    projectId: "the2-9d18b",
+    storageBucket: "the2-9d18b.appspot.com",
+    messagingSenderId: "923197879401",
+    appId: "1:923197879401:web:c0c71e852187ef545ddef8",
+    measurementId: "G-VFKYK5F2FD"
+  };
+
+
+// Initialize Firebase
+const app = !getApps().length ? initializeApp( firebaseConfig ) : getApp();
+// make auth and database references
+const auth = getAuth (app);
+const database = getDatabase(app);
+
+------------
+  Add code for the authentication firebase -- got the vasic code from the firebase auth
+  
+  signUp.addEventListener('click', (e) => {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((email) => {
+        // Signed in
+        const user = email.user;
+       
+
+
+        alert('user created!');
+        // ...
+    })
+    .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+
+    alert(errorMessage);
+    // ..
+    });
+
+
+});
+
+----------------------------------------
+
+Did not deploy firebase, but used the live local host
+
+The error that came up is: 
+
+127.0.0. 1:5500 says 
+Firebase: Error (auth/network-request-failed)
+
+
+----------------------------------------
+
+New environment did not work out...
